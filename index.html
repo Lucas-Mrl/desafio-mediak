@@ -1,0 +1,4571 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media.K | Acesso ao Mercado 50+ | Silver Economy</title>
+    <meta name="description" content="A Media.K ajuda marcas a capturar a oportunidade do mercado 50+ com estratégia, mídia, CRM, BI e Método Estrela do Norte. Solicite diagnóstico gratuito.">
+    <meta property="og:title" content="Media.K | Especialistas em Crescimento no Mercado 50+">
+    <meta property="og:description" content="Estratégia, mídia, CRM, BI e tracking para transformar a Silver Economy em crescimento mensurável. Método próprio, +100 marcas impulsionadas e parceiros Google, Meta e TikTok.">
+    <meta property="og:image" content="https://www.mediak.com.br/icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mediak.com.br">
+    <meta name="theme-color" content="#0574dd">
+    <link rel="icon" href="https://www.mediak.com.br/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           CSS RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #0574dd;
+            --cyan: #02d3f1;
+            --pink: #fd3b66;
+            --yellow: #ffd400;
+            --dark: #0f172a;
+            --body: #334155;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+            --bg-alt: #f8faff;
+            --radius-card: 14px;
+            --radius-btn: 8px;
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-card-hover: 0 2px 8px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.12);
+            --transition: all 0.2s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--body);
+            background: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        input, select, textarea, button {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        /* ============================================
+           PROGRESS BAR
+           ============================================ */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            z-index: 10001;
+            transition: width 0.1s linear;
+        }
+
+        /* ============================================
+           CONTAINER
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 40px;
+            }
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--dark);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+        h4 { font-size: 1.125rem; }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--blue);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 50px;
+            padding: 12px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: var(--radius-btn);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0460b8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(5, 116, 221, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--blue);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .btn-dark:hover {
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        .btn-white:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        /* ============================================
+           SECTION SPACING
+           ============================================ */
+        .section {
+            padding: 80px 0;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                padding: 100px 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section {
+                padding: 120px 0;
+            }
+        }
+
+        .section-dark {
+            background: var(--dark);
+        }
+
+        .section-dark h2,
+        .section-dark h3,
+        .section-dark h4,
+        .section-dark .section-label {
+            color: #fff;
+        }
+
+        .section-dark .section-subtitle,
+        .section-dark p {
+            color: #94a3b8;
+        }
+
+        .section-alt {
+            background: var(--bg-alt);
+        }
+
+        /* ============================================
+           CARDS
+           ============================================ */
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: 32px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        /* ============================================
+           FORM STYLES
+           ============================================ */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-btn);
+            color: var(--dark);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(5, 116, 221, 0.1);
+        }
+
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: var(--pink);
+        }
+
+        .form-group .error-msg {
+            color: var(--pink);
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .form-group .error-msg.visible {
+            display: block;
+        }
+
+        .form-dark input,
+        .form-dark select,
+        .form-dark textarea {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.12);
+            color: #fff;
+        }
+
+        .form-dark input::placeholder,
+        .form-dark textarea::placeholder {
+            color: #64748b;
+        }
+
+        .form-dark input:focus,
+        .form-dark select:focus,
+        .form-dark textarea:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px rgba(2, 211, 241, 0.1);
+        }
+
+        .form-dark label {
+            color: #e2e8f0;
+        }
+
+        .form-dark select option {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        /* ============================================
+           SCROLL REVEAL
+           ============================================ */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-reveal].revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .navbar-logo span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .navbar-links {
+            display: none;
+            align-items: center;
+            gap: 32px;
+        }
+
+        @media (min-width: 1024px) {
+            .navbar-links {
+                display: flex;
+            }
+        }
+
+        .navbar-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--body);
+        }
+
+        .navbar-links a:hover {
+            color: var(--blue);
+        }
+
+        .navbar-cta {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .navbar-cta {
+                display: inline-flex;
+            }
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 10002;
+        }
+
+        @media (min-width: 1024px) {
+            .hamburger {
+                display: none;
+            }
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 360px;
+            height: 100vh;
+            background: #fff;
+            z-index: 10001;
+            padding: 80px 32px 32px;
+            transition: right 0.3s ease;
+            box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 16px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--dark);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--blue);
+        }
+
+        .mobile-menu .btn {
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(5,116,221,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(2,211,241,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 64px;
+            }
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(5,116,221,0.06);
+            border: 1px solid rgba(5,116,221,0.12);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--blue);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--blue);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .hero-proof {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        @media (min-width: 480px) {
+            .hero-proof {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .hero-proof-item {
+            text-align: left;
+        }
+
+        .hero-proof-number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .hero-proof-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        /* Hero Form Card */
+        .hero-form-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 12px 48px rgba(0,0,0,0.06);
+            padding: 36px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-form-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-form-card .form-subtitle {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .hero-form-card .btn {
+            width: 100%;
+        }
+
+        .form-trust {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        .form-trust svg {
+            flex-shrink: 0;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        .form-success.visible {
+            display: block;
+        }
+
+        .form-success .success-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.75rem;
+            animation: scaleIn 0.4s ease;
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            60% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        .form-success h4 {
+            color: #10b981;
+            margin-bottom: 8px;
+        }
+
+        .form-success p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           TRUST BAR
+           ============================================ */
+        .trust-bar {
+            background: var(--dark);
+            padding: 28px 0;
+        }
+
+        .trust-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 24px 40px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .trust-item .trust-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trust-item strong {
+            color: #fff;
+        }
+
+        /* ============================================
+           CLIENTS
+           ============================================ */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .clients-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+            }
+        }
+
+        .clients-subsection h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clients-subsection h3::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--blue);
+            border-radius: 2px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .chip:hover {
+            border-color: var(--blue);
+            background: rgba(5,116,221,0.03);
+        }
+
+        .chip-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .partner-chip {
+            padding: 10px 18px;
+            background: rgba(5,116,221,0.04);
+            border-color: rgba(5,116,221,0.12);
+        }
+
+        .partner-chip svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .logo-chip {
+            min-height: 56px;
+            padding: 12px 18px;
+        }
+
+        .logo-chip img {
+            width: 92px;
+            max-height: 28px;
+            object-fit: contain;
+        }
+
+        .partner-chip.logo-chip img {
+            width: 96px;
+            max-height: 26px;
+        }
+
+        .case-brand-logo {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 8px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .channel-logo {
+            width: 28px;
+            max-height: 28px;
+            object-fit: contain;
+        }
+
+        .channel-icon.multi-logo {
+            gap: 4px;
+        }
+
+        .channel-icon.multi-logo .channel-logo {
+            width: 22px;
+            max-height: 22px;
+        }
+
+        /* ============================================
+           CASES
+           ============================================ */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .cases-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .case-card {
+            padding: 36px;
+        }
+
+        .case-card .case-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .case-brand-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .case-brand h4 {
+            font-size: 1rem;
+        }
+
+        .case-brand span {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .case-step {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .case-step:last-child {
+            border-bottom: none;
+        }
+
+        .case-step-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .case-step-label.desafio { color: var(--pink); }
+        .case-step-label.solucao { color: var(--blue); }
+        .case-step-label.resultado { color: #10b981; }
+
+        .case-step p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .case-result-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16,185,129,0.08);
+            color: #10b981;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        /* ============================================
+           METODO
+           ============================================ */
+        .metodo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .metodo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .metodo-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .metodo-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-card);
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metodo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .metodo-card:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .metodo-card:hover::before {
+            opacity: 1;
+        }
+
+        .metodo-step-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .metodo-card h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .metodo-card p {
+            font-size: 0.875rem;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           INTELLIGENCE
+           ============================================ */
+        .intel-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .intel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .intel-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .intel-card {
+            padding: 28px;
+        }
+
+        .intel-card .intel-stat {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--blue);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .intel-card h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .intel-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           DASHBOARD MOCKUP
+           ============================================ */
+        .dashboard-section {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+
+        .dashboard-mock {
+            background: #1e293b;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            overflow: hidden;
+            box-shadow: 0 8px 48px rgba(0,0,0,0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dashboard-chrome {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 20px;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .chrome-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .chrome-dot.red { background: #ef4444; }
+        .chrome-dot.yellow { background: #fbbf24; }
+        .chrome-dot.green { background: #22c55e; }
+
+        .chrome-url {
+            margin-left: 12px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            color: #64748b;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .dashboard-content {
+            padding: 24px;
+        }
+
+        .dashboard-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .kpi-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .kpi-value {
+                font-size: 1.1rem;
+            }
+        }
+
+        .kpi-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-top: 4px;
+        }
+
+        .dashboard-chart {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chart-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        .chart-period {
+            font-size: 0.7rem;
+            color: #64748b;
+            background: rgba(255,255,255,0.04);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .dashboard-chart svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .chart-line {
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            transition: stroke-dashoffset 2s ease;
+        }
+
+        .chart-line.animated {
+            stroke-dashoffset: 0;
+        }
+
+        .dashboard-channels {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .channel-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .channel-bar-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #94a3b8;
+            min-width: 100px;
+        }
+
+        .channel-bar-track {
+            flex: 1;
+            height: 8px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .channel-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.2s ease;
+            width: 0;
+        }
+
+        .channel-bar-fill.meta { background: linear-gradient(90deg, var(--blue), #0ea5e9); }
+        .channel-bar-fill.google { background: linear-gradient(90deg, #f59e0b, #eab308); }
+        .channel-bar-fill.taboola { background: linear-gradient(90deg, var(--cyan), #06b6d4); }
+
+        .channel-bar-pct {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff;
+            min-width: 36px;
+            text-align: right;
+        }
+        /* ============================================
+           OPPORTUNITY NARRATIVE
+           ============================================ */
+        .business-grid,
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .business-grid,
+            .mistakes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .business-card,
+        .mistake-card {
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-card::before,
+        .mistake-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+        }
+
+        .business-kicker,
+        .mistake-kicker {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(5,116,221,0.07);
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 18px;
+        }
+
+        .business-card h4,
+        .mistake-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .business-card p,
+        .mistake-card p {
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .market-visual {
+            max-width: 920px;
+            margin: 0 auto 40px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: 32px;
+        }
+
+        .market-bar-row {
+            display: grid;
+            grid-template-columns: 130px 1fr 74px;
+            gap: 14px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .market-bar-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .market-bar-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .market-bar-track {
+            height: 12px;
+            background: #eef2f7;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .market-bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+        }
+
+        .market-bar-value {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--blue);
+            text-align: right;
+        }
+
+        .stat-insight {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            font-size: 0.78rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--dark);
+        }
+
+        .mistake-card {
+            background: #fff;
+        }
+
+        .mistake-kicker {
+            background: rgba(253,59,102,0.08);
+            color: var(--pink);
+        }
+
+        .strategic-bridge {
+            margin-top: 44px;
+            padding: 32px;
+            border-radius: var(--radius-card);
+            background: var(--dark);
+            color: #cbd5e1;
+            display: grid;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .strategic-bridge {
+                grid-template-columns: 1.2fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .strategic-bridge h3 {
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .strategic-bridge p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .bridge-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 560px) {
+            .bridge-flow {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .bridge-step {
+            padding: 14px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+            background: rgba(255,255,255,0.04);
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            .market-bar-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .market-bar-value {
+                text-align: left;
+            }
+        }
+
+        /* ============================================
+           COMPARISON
+           ============================================ */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .comparison-col {
+            border-radius: var(--radius-card);
+            padding: 40px;
+        }
+
+        .comparison-col.traditional {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-col.mediak {
+            background: var(--dark);
+            border: 1px solid rgba(5,116,221,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-col.mediak::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+        }
+
+        .comparison-col h3 {
+            font-size: 1.15rem;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .comparison-col.mediak h3 {
+            color: #fff;
+        }
+
+        .comparison-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .comparison-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .comparison-item .icon-x {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(253,59,102,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .comparison-item .icon-check {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(16,185,129,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .comparison-col.mediak .comparison-item {
+            color: #cbd5e1;
+        }
+
+        /* ============================================
+           SILVER ECONOMY NUMBERS
+           ============================================ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 36px 24px;
+        }
+
+        .stat-card .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .stat-card p {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .stat-source {
+            font-size: 0.7rem;
+            color: var(--muted);
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+
+        /* ============================================
+           URGENCY
+           ============================================ */
+        .urgency-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .urgency-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .urgency-card {
+            padding: 36px;
+            border-left: 3px solid var(--blue);
+        }
+
+        .urgency-card .urgency-num {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(5,116,221,0.1);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .urgency-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .urgency-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           CHANNELS
+           ============================================ */
+        .channels-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .channels-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .channels-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .channel-card {
+            padding: 32px;
+        }
+
+        .channel-card .channel-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(5,116,221,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .channel-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .channel-card p {
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           DIFFERENTIALS
+           ============================================ */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .diff-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .diff-card {
+            padding: 32px;
+        }
+
+        .diff-card .diff-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .diff-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .diff-card p {
+            font-size: 0.875rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           LEADERSHIP
+           ============================================ */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .leadership-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .leader-card {
+            text-align: center;
+            padding: 40px 32px;
+        }
+
+        .leader-card .leader-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--border);
+        }
+
+        .leader-card .leader-initials {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .leader-card h4 {
+            margin-bottom: 4px;
+        }
+
+        .leader-card .leader-role {
+            font-size: 0.85rem;
+            color: var(--blue);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .leader-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           DIAGNOSIS (DARK)
+           ============================================ */
+        .diagnosis-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .diagnosis-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+        }
+
+        .diagnosis-benefits {
+            list-style: none;
+        }
+
+        .diagnosis-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .diagnosis-benefits li:last-child {
+            border-bottom: none;
+        }
+
+        .diagnosis-benefits li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ============================================
+           MAIN FORM
+           ============================================ */
+        .main-form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .main-form-grid {
+                grid-template-columns: 1fr 1.2fr;
+                gap: 64px;
+                align-items: start;
+            }
+        }
+
+        .main-form-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px;
+            background: var(--bg-alt);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .trust-badge .badge-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(5,116,221,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .trust-badge h4 {
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        .trust-badge p {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .main-form-card {
+            padding: 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 480px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 16px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            accent-color: var(--blue);
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .checkbox-group label a {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--blue);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark);
+            gap: 16px;
+            transition: var(--transition);
+            min-height: 50px;
+        }
+
+        .faq-question:hover {
+            color: var(--blue);
+        }
+
+        .faq-question:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: -2px;
+        }
+
+        .faq-chevron {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark);
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 480px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand img {
+            height: 32px;
+        }
+
+        .footer-brand span {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            padding: 6px 0;
+        }
+
+        .footer-col a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--blue);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: #94a3b8;
+        }
+
+        .footer-social a:hover svg {
+            fill: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* ============================================
+           FLOATING CTA (MOBILE)
+           ============================================ */
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-cta.hidden {
+            transform: translateY(100%);
+        }
+
+        .floating-cta .btn {
+            width: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            .floating-cta {
+                display: block;
+            }
+        }
+
+        /* ============================================
+           UTILITIES
+           ============================================ */
+        .text-center { text-align: center; }
+        .text-white { color: #fff !important; }
+        .text-gradient {
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+
+
+        /* ============================================
+           PREMIUM VISUAL SYSTEM
+           ============================================ */
+        :root {
+            --ink: #07111f;
+            --surface: #ffffff;
+            --surface-soft: #f3f7fb;
+            --line: rgba(15, 23, 42, 0.1);
+            --glass: rgba(255,255,255,0.74);
+            --premium-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+        }
+
+        body {
+            background:
+                linear-gradient(180deg, #ffffff 0%, #f7fbff 44%, #ffffff 100%);
+        }
+
+        .section {
+            padding: 96px 0;
+        }
+
+        @media (min-width: 1024px) {
+            .section {
+                padding: 136px 0;
+            }
+        }
+
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            letter-spacing: 0;
+        }
+
+        .section-subtitle {
+            max-width: 760px;
+        }
+
+        .card {
+            border-color: rgba(15, 23, 42, 0.08);
+            box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 142px 0 92px;
+            background:
+                radial-gradient(circle at 8% 20%, rgba(2,211,241,0.18), transparent 28%),
+                radial-gradient(circle at 86% 12%, rgba(5,116,221,0.14), transparent 30%),
+                linear-gradient(135deg, #f8fbff 0%, #ffffff 44%, #eef7ff 100%);
+        }
+
+        .hero::before {
+            top: 92px;
+            right: 8%;
+            width: 520px;
+            height: 520px;
+            background:
+                linear-gradient(rgba(5,116,221,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(5,116,221,0.08) 1px, transparent 1px);
+            background-size: 42px 42px;
+            border-radius: 0;
+            mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+        }
+
+        .hero::after {
+            display: none;
+        }
+
+        .hero .container {
+            grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.82fr);
+            gap: 72px;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            font-size: clamp(2.5rem, 6vw, 5.1rem);
+            line-height: 0.98;
+            letter-spacing: 0;
+        }
+
+        .hero-sub {
+            max-width: 660px;
+            font-size: 1.15rem;
+            color: #405168;
+        }
+
+        .hero-form-card {
+            border: 1px solid rgba(5, 116, 221, 0.14);
+            box-shadow: var(--premium-shadow);
+            backdrop-filter: blur(16px);
+        }
+
+        .hero-intel-panel {
+            position: relative;
+            margin: 38px 0 34px;
+            padding: 28px;
+            border: 1px solid rgba(5, 116, 221, 0.12);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.72);
+            box-shadow: 0 18px 58px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        .hero-intel-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan), var(--pink));
+        }
+
+        .intel-panel-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
+        }
+
+        .intel-panel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .intel-panel-cell {
+            padding: 16px 14px;
+            border-radius: 12px;
+            background: #f7fbff;
+            border: 1px solid rgba(15,23,42,0.06);
+        }
+
+        .intel-panel-cell strong {
+            display: block;
+            color: var(--dark);
+            font-size: 1.2rem;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .intel-panel-cell span {
+            color: var(--muted);
+            font-size: 0.76rem;
+            line-height: 1.35;
+        }
+
+        .hero-proof {
+            max-width: 680px;
+            padding-top: 6px;
+        }
+
+        .hero-proof-number {
+            font-size: 2rem;
+        }
+
+        .trust-bar {
+            background: #07111f;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .opportunity-section {
+            background: #07111f;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .opportunity-section .section-label,
+        .opportunity-section h2 {
+            color: #fff;
+        }
+
+        .opportunity-section .section-subtitle {
+            color: #aeb9c8;
+        }
+
+        .opportunity-infographic {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 48px;
+            align-items: stretch;
+        }
+
+        .opportunity-lead {
+            padding: 42px;
+            border-radius: 22px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+            border: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .opportunity-lead::after {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            bottom: -160px;
+            background: radial-gradient(circle, rgba(2,211,241,0.26), transparent 68%);
+        }
+
+        .opportunity-lead .mega-number {
+            position: relative;
+            z-index: 1;
+            font-size: clamp(4rem, 11vw, 8.4rem);
+            font-weight: 800;
+            line-height: 0.86;
+            color: #fff;
+            letter-spacing: 0;
+        }
+
+        .opportunity-lead .mega-number span {
+            display: block;
+            font-size: clamp(1.3rem, 3vw, 2.1rem);
+            color: var(--cyan);
+            margin-top: 14px;
+        }
+
+        .opportunity-lead p {
+            position: relative;
+            z-index: 1;
+            margin-top: 28px;
+            max-width: 460px;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .opportunity-flow {
+            display: grid;
+            gap: 14px;
+        }
+
+        .flow-step {
+            display: grid;
+            grid-template-columns: 72px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .flow-step strong {
+            color: #fff;
+            font-size: 1.05rem;
+        }
+
+        .flow-step p {
+            color: #9fb0c4;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .flow-index {
+            color: var(--cyan);
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+
+        .flow-signal {
+            width: 92px;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            overflow: hidden;
+        }
+
+        .flow-signal span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+        }
+
+        .strategic-system {
+            background: #fff;
+        }
+
+        .system-map {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+            position: relative;
+        }
+
+        .system-map::before {
+            content: '';
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            top: 42px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(5,116,221,0.28), transparent);
+        }
+
+        .system-node {
+            position: relative;
+            z-index: 1;
+            min-height: 170px;
+            padding: 22px 18px;
+            border-radius: 16px;
+            background: #fff;
+            border: 1px solid rgba(15,23,42,0.08);
+            box-shadow: 0 16px 42px rgba(15,23,42,0.06);
+        }
+
+        .system-node .node-dot {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .system-node h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .system-node p {
+            color: var(--muted);
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
+        .profile-framework {
+            background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+        }
+
+        .profile-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .profile-card {
+            padding: 26px;
+            border: 1px solid rgba(15,23,42,0.08);
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 16px 42px rgba(15,23,42,0.05);
+        }
+
+        .profile-card .profile-kicker {
+            display: inline-flex;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: rgba(5,116,221,0.08);
+            color: var(--blue);
+            font-size: 0.72rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .profile-card h4 {
+            margin-bottom: 12px;
+        }
+
+        .profile-row {
+            display: grid;
+            grid-template-columns: 78px 1fr;
+            gap: 10px;
+            padding-top: 10px;
+            margin-top: 10px;
+            border-top: 1px solid rgba(15,23,42,0.08);
+            font-size: 0.78rem;
+        }
+
+        .profile-row span:first-child {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .profile-row span:last-child {
+            color: var(--dark);
+        }
+
+        .cases-premium-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .case-anchor {
+            padding: 42px;
+            border-radius: 24px;
+            background: #07111f;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-anchor::after {
+            content: '';
+            position: absolute;
+            inset: auto -160px -180px auto;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(2,211,241,0.2), transparent 70%);
+        }
+
+        .case-anchor .case-brand-logo {
+            border-color: rgba(255,255,255,0.16);
+        }
+
+        .case-anchor h3,
+        .case-anchor h4 {
+            color: #fff;
+        }
+
+        .case-anchor p {
+            color: #aeb9c8;
+        }
+
+        .case-anchor-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.88fr;
+            gap: 34px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .case-anchor-metrics {
+            display: grid;
+            gap: 12px;
+        }
+
+        .case-metric {
+            padding: 20px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .case-metric strong {
+            display: block;
+            color: #fff;
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .case-metric span {
+            color: #aeb9c8;
+            font-size: 0.82rem;
+        }
+
+        .case-mini-stack {
+            display: grid;
+            gap: 18px;
+        }
+
+        .case-mini {
+            padding: 28px;
+            border-radius: 20px;
+            background: #fff;
+            border: 1px solid rgba(15,23,42,0.08);
+            box-shadow: 0 16px 42px rgba(15,23,42,0.06);
+        }
+
+        .case-mini .case-step {
+            border: 0;
+            padding: 8px 0 0;
+        }
+
+        .dashboard-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(2,211,241,0.1);
+            color: var(--cyan);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .leader-card .leader-photo {
+            border: 4px solid #fff;
+            box-shadow: 0 16px 38px rgba(15,23,42,0.16);
+        }
+
+        @media (max-width: 1023px) {
+            .hero {
+                min-height: auto;
+                padding-top: 118px;
+            }
+
+            .hero .container,
+            .opportunity-infographic,
+            .case-anchor-grid,
+            .cases-premium-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .system-map,
+            .profile-matrix {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section {
+                padding: 76px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.45rem;
+            }
+
+            .hero-intel-panel,
+            .opportunity-lead,
+            .case-anchor {
+                padding: 24px;
+                border-radius: 18px;
+            }
+
+            .intel-panel-grid,
+            .system-map,
+            .profile-matrix {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-step {
+                grid-template-columns: 44px 1fr;
+            }
+
+            .flow-signal {
+                grid-column: 2;
+                width: 100%;
+            }
+        }
+
+        /* ============================================
+           HEADER + FIRST FOLD REFINEMENT
+           ============================================ */
+        .navbar {
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            padding: 8px 0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        .navbar.scrolled {
+            padding: 7px 0;
+        }
+
+        .navbar .container {
+            min-height: 52px;
+        }
+
+        .navbar-logo {
+            gap: 11px;
+            min-width: 142px;
+        }
+
+        .navbar-logo img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            flex: 0 0 auto;
+        }
+
+        .navbar-logo-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1;
+            box-shadow: 0 10px 24px rgba(5,116,221,0.24);
+        }
+
+        .navbar-logo-word,
+        .navbar-logo span.navbar-logo-word {
+            color: #0f172a;
+            font-size: 1.22rem;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .hero {
+            min-height: auto;
+            padding: 92px 0 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            top: 58px;
+            width: 430px;
+            height: 430px;
+            opacity: 0.72;
+        }
+
+        .hero .container {
+            grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.72fr);
+            gap: 44px;
+            align-items: start;
+        }
+
+        .hero-copy {
+            max-width: 680px;
+        }
+
+        .hero-badge {
+            margin-bottom: 14px;
+            padding: 5px 13px;
+            font-size: 0.75rem;
+        }
+
+        .hero h1 {
+            max-width: 690px;
+            margin-bottom: 14px;
+            font-size: clamp(2.55rem, 4.8vw, 4.2rem);
+            line-height: 1.01;
+        }
+
+        .hero-sub {
+            max-width: 630px;
+            margin-bottom: 18px;
+            font-size: 1.02rem;
+            line-height: 1.58;
+        }
+
+        .hero-ctas {
+            margin-bottom: 0;
+            gap: 10px;
+        }
+
+        .hero .btn {
+            min-height: 46px;
+            padding: 10px 22px;
+        }
+
+        .hero-intel-panel {
+            margin: 22px 0 18px;
+            padding: 20px;
+            border-radius: 16px;
+        }
+
+        .intel-panel-label {
+            font-size: 0.72rem;
+            margin-bottom: 14px;
+        }
+
+        .intel-panel-grid {
+            gap: 10px;
+        }
+
+        .intel-panel-cell {
+            min-height: 104px;
+            padding: 14px;
+        }
+
+        .intel-panel-cell strong {
+            font-size: 1.2rem;
+            margin-bottom: 7px;
+        }
+
+        .intel-panel-cell span {
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .hero-proof {
+            max-width: 640px;
+            gap: 14px;
+            padding-top: 0;
+        }
+
+        .hero-proof-number {
+            font-size: 1.45rem;
+            line-height: 1;
+        }
+
+        .hero-proof-label {
+            font-size: 0.72rem;
+            line-height: 1.25;
+        }
+
+        .hero-form-card {
+            padding: 24px;
+            border-radius: 18px;
+        }
+
+        .hero-form-card h3 {
+            font-size: 1.12rem;
+            margin-bottom: 5px;
+        }
+
+        .hero-form-card .form-subtitle {
+            margin-bottom: 16px;
+            font-size: 0.8rem;
+            line-height: 1.45;
+        }
+
+        .hero-form-card .form-group {
+            margin-bottom: 11px;
+        }
+
+        .hero-form-card .form-group label {
+            margin-bottom: 4px;
+            font-size: 0.78rem;
+        }
+
+        .hero-form-card .form-group input,
+        .hero-form-card .form-group select {
+            min-height: 42px;
+            padding: 9px 12px;
+            font-size: 0.88rem;
+            border-radius: 10px;
+        }
+
+        .hero-form-card .form-trust {
+            margin-top: 11px;
+            font-size: 0.72rem;
+        }
+
+        @media (min-width: 1280px) and (max-height: 820px) {
+            .hero {
+                padding-top: 82px;
+                padding-bottom: 30px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.45rem, 4.1vw, 3.75rem);
+            }
+
+            .hero-intel-panel {
+                margin: 18px 0 14px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .navbar {
+                padding: 7px 0;
+            }
+
+            .hero {
+                padding-top: 84px;
+                padding-bottom: 42px;
+            }
+
+            .hero .container {
+                gap: 28px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.2rem, 9vw, 3.15rem);
+            }
+
+            .hero-sub {
+                font-size: 0.98rem;
+                line-height: 1.55;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar-logo-mark {
+                width: 32px;
+                height: 32px;
+            }
+
+            .navbar-logo-word,
+            .navbar-logo span.navbar-logo-word {
+                font-size: 1.08rem;
+            }
+
+            .hero {
+                padding-top: 78px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.06;
+            }
+
+            .hero-ctas .btn {
+                width: 100%;
+            }
+
+            .hero-intel-panel {
+                margin: 18px 0 16px;
+                padding: 18px;
+            }
+
+            .intel-panel-label {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .hero-proof {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-form-card {
+                padding: 20px;
+            }
+        }
+
+
+        /* ============================================
+           PRINT
+           ============================================ */
+        @media print {
+            .navbar, .floating-cta, .progress-bar {
+                display: none !important;
+            }
+            .hero {
+                padding-top: 40px;
+            }
+            [data-reveal] {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Progresso da pagina"></div>
+
+    <!-- SECTION: NAVBAR -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a href="#" class="navbar-logo" aria-label="Media.K - Página inicial">
+                <img src="https://www.mediak.com.br/icon.png" alt="Media.K Logo" width="36" height="36">
+                <span class="navbar-logo-word">Media.K</span>
+            </a>
+
+            <div class="navbar-links">
+                <a href="#silver-economy">Oportunidade</a>
+                <a href="#metodo">Método</a>
+                <a href="#cases">Cases</a>
+                <a href="#canais">Serviços</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <a href="#diagnostico" class="btn btn-primary navbar-cta" aria-label="Solicitar diagnóstico gratuito">Diagnóstico Gratuito</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+        <a href="#silver-economy">Oportunidade</a>
+        <a href="#metodo">Método</a>
+        <a href="#cases">Cases</a>
+        <a href="#canais">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#faq">FAQ</a>
+        <a href="#diagnostico" class="btn btn-primary">Diagnóstico Gratuito</a>
+    </div>
+
+    <!-- SECTION: HERO -->
+    <section class="hero" id="topo">
+        <div class="container">
+            <div class="hero-copy">
+                <div class="hero-badge">Inteligência proprietária para o mercado 50+</div>
+                <h1>Transformamos a oportunidade do mercado 50+ em <span class="highlight">crescimento mensurável</span>.</h1>
+                <p class="hero-sub">Enquanto a maioria das marcas disputa os mesmos consumidores, o público 50+ movimenta mais de R$ 2 trilhões e continua subatendido. A Media.K conecta estratégia, mídia, CRM e BI para capturar essa demanda do clique ao atendimento.</p>
+                <div class="hero-ctas">
+                    <a href="#diagnostico" class="btn btn-primary" aria-label="Solicitar diagnóstico gratuito">Solicitar Diagnóstico</a>
+                    <a href="#silver-economy" class="btn btn-outline" aria-label="Ver oportunidade 50+">Ver a Oportunidade</a>
+                </div>
+                <div class="hero-intel-panel" data-reveal>
+                    <div class="intel-panel-label"><span>Modelo operacional Media.K</span><span>Mercado 50+ / CRM / BI</span></div>
+                    <div class="intel-panel-grid">
+                        <div class="intel-panel-cell"><strong>50+</strong><span>perfis e sinais comportamentais</span></div>
+                        <div class="intel-panel-cell"><strong>CRM</strong><span>leads conectados ao atendimento</span></div>
+                        <div class="intel-panel-cell"><strong>BI</strong><span>visão por canal, loja e regional</span></div>
+                        <div class="intel-panel-cell"><strong>Escala</strong><span>mídia orientada por receita real</span></div>
+                    </div>
+                </div>
+                <div class="hero-proof" data-reveal>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="100" data-prefix="+">+0</div><div class="hero-proof-label">marcas atendidas</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="15" data-prefix="+">+0</div><div class="hero-proof-label">anos de mercado</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="280">0</div><div class="hero-proof-label">lojas gerenciadas</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="6">0</div><div class="hero-proof-label">perfis mapeados</div></div>
+                </div>
+            </div>
+            <div class="hero-form-card" data-reveal>
+                <div id="heroFormContent">
+                    <h3>Receba seu diagnóstico gratuito</h3>
+                    <p class="form-subtitle">Nossa equipe responde em até 24h com uma leitura do tamanho da oportunidade 50+ para o seu segmento.</p>
+                    <form id="heroForm" novalidate>
+                        <div class="form-group"><label for="heroNome">Nome *</label><input type="text" id="heroNome" name="nome" placeholder="Seu nome completo" required><span class="error-msg">Por favor, informe seu nome.</span></div>
+                        <div class="form-group"><label for="heroEmpresa">Empresa *</label><input type="text" id="heroEmpresa" name="empresa" placeholder="Nome da empresa" required><span class="error-msg">Por favor, informe sua empresa.</span></div>
+                        <div class="form-group"><label for="heroWhatsapp">WhatsApp *</label><input type="tel" id="heroWhatsapp" name="whatsapp" class="phone-mask" placeholder="(00) 00000-0000" required><span class="error-msg">Por favor, informe um WhatsApp válido.</span></div>
+                        <div class="form-group"><label for="heroSegmento">Segmento</label><select id="heroSegmento" name="segmento"><option value="">Selecione (opcional)</option><option value="saude">Saúde e Bem-estar</option><option value="varejo">Varejo</option><option value="financeiro">Serviços Financeiros</option><option value="educacao">Educação</option><option value="turismo">Turismo</option><option value="tecnologia">Tecnologia</option><option value="imobiliario">Imobiliário</option><option value="outro">Outro</option></select></div>
+                        <button type="submit" class="btn btn-primary" aria-label="Enviar formulário de diagnóstico">Quero Meu Diagnóstico &rarr;</button>
+                    </form>
+                    <div class="form-trust"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span>Seus dados estão seguros. Sem spam.</span></div>
+                </div>
+                <div id="heroFormSuccess" class="form-success"><div class="success-icon">&#10003;</div><h4>Solicitação enviada!</h4><p>Nossa equipe entrará em contato em até 24h com seu diagnóstico personalizado.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TRUST BAR -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <span><strong>Google</strong> Partner</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <span><strong>Meta</strong> Partner</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span><strong>15+</strong> anos</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <span><strong>+100</strong> marcas</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <span><strong>280</strong> lojas</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION: BUSINESS OPPORTUNITY -->
+    <section class="section" id="oportunidade-50">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Por que isso importa</span>
+                <h2 class="section-title">Por que sua empresa deveria se importar com o público 50+?</h2>
+                <p class="section-subtitle">Porque não se trata de idade. Trata-se de poder de compra, patrimônio acumulado, recorrência e uma competição ainda menor do que nos mercados saturados.</p>
+            </div>
+            <div class="business-grid">
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">01</div>
+                    <h4>Mais poder aquisitivo</h4>
+                    <p>O público 50+ concentra renda, patrimônio e decisão de compra. Para muitas categorias, ele não é um nicho: é uma das maiores fontes de margem.</p>
+                </div>
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">02</div>
+                    <h4>Menos disputa direta</h4>
+                    <p>Enquanto concorrentes brigam por jovens hiperimpactados, o 50+ segue subatendido por campanhas que não entendem seu comportamento real.</p>
+                </div>
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">03</div>
+                    <h4>Maior fidelização</h4>
+                    <p>Quando a marca conquista confiança, atendimento e relevância, o relacionamento tende a durar mais e abrir espaço para ticket superior.</p>
+                </div>
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">04</div>
+                    <h4>Crescimento populacional</h4>
+                    <p>A base de consumidores maduros cresce todos os anos. Quem aprende a capturar essa demanda agora cria vantagem antes da maioria.</p>
+                </div>
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">05</div>
+                    <h4>Decisão mais criteriosa</h4>
+                    <p>Esse consumidor pesquisa, compara, valida reputação e valoriza clareza. Campanhas rasas perdem eficiência; estratégias bem desenhadas convertem melhor.</p>
+                </div>
+                <div class="card business-card" data-reveal>
+                    <div class="business-kicker">06</div>
+                    <h4>Receita ainda invisível</h4>
+                    <p>Muitas empresas já recebem demanda 50+, mas não conseguem medi-la por canal, perfil, loja ou CRM. O dinheiro existe, mas fica escondido no funil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SILVER ECONOMY NUMBERS -->
+    <section class="section opportunity-section" id="silver-economy">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Silver Economy</span>
+                <h2 class="section-title">O tamanho comercial da oportunidade 50+</h2>
+                <p class="section-subtitle">Cada número precisa levar a uma decisão de negócio: existe demanda, existe dinheiro e ainda existe espaço para marcas que sabem entrar.</p>
+            </div>
+            <div class="opportunity-infographic" data-reveal>
+                <div class="opportunity-lead">
+                    <div class="mega-number">R$ 2 tri<span>em movimento anual</span></div>
+                    <p>O mercado 50+ já tem escala, poder de compra e baixa saturação relativa. A oportunidade não é demográfica: é comercial.</p>
+                </div>
+                <div class="opportunity-flow" aria-label="Infográfico da oportunidade 50+">
+                    <div class="flow-step"><div class="flow-index">01</div><div><strong>54 milhões de consumidores</strong><p>Base grande o suficiente para sustentar estratégia própria.</p></div><div class="flow-signal"><span style="width:74%"></span></div></div>
+                    <div class="flow-step"><div class="flow-index">02</div><div><strong>85% usam smartphone</strong><p>O 50+ pesquisa, compara e decide também no digital.</p></div><div class="flow-signal"><span style="width:85%"></span></div></div>
+                    <div class="flow-step"><div class="flow-index">03</div><div><strong>57% não se sentem representados</strong><p>A barreira não é demanda; é abordagem, clareza e confiança.</p></div><div class="flow-signal"><span style="width:57%"></span></div></div>
+                    <div class="flow-step"><div class="flow-index">04</div><div><strong>Menor competição qualificada</strong><p>Marcas que aprendem primeiro compram mídia melhor e retêm mais.</p></div><div class="flow-signal"><span style="width:68%"></span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MARKET MISTAKES -->
+    <section class="section" id="erros-mercado">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">O que bloqueia o crescimento</span>
+                <h2 class="section-title">O que a maioria das empresas erra ao tentar acessar o 50+</h2>
+                <p class="section-subtitle">O problema raramente é falta de verba. É tratar um mercado complexo como se fosse apenas mais uma segmentação de campanha.</p>
+            </div>
+            <div class="mistakes-grid">
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">01</div><h4>Tratam o 50+ como um bloco único</h4><p>Uma pessoa de 52 anos e outra de 72 podem ter motivações, objeções e canais completamente diferentes.</p></div>
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">02</div><h4>Usam criativos feitos para jovens</h4><p>A campanha até gera cliques, mas não cria confiança, clareza e desejo suficientes para transformar interesse em atendimento.</p></div>
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">03</div><h4>Medem apenas CPL</h4><p>Lead barato pode esconder baixa qualificação. O que importa é entender quais campanhas capturam demanda com chance real de compra.</p></div>
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">04</div><h4>Ignoram comportamento</h4><p>O decisor 50+ valoriza segurança, prova, atendimento e contexto. Sem isso, a marca vira apenas mais uma opção.</p></div>
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">05</div><h4>Não conectam mídia e CRM</h4><p>Sem integração, a empresa não sabe quais canais geram conversa, agenda, venda e recorrência.</p></div>
+                <div class="card mistake-card" data-reveal><div class="mistake-kicker">06</div><h4>Otimizam para plataforma, não para negócio</h4><p>Google, Meta e TikTok são meios. A pergunta central é: qual investimento abre acesso real ao mercado 50+?</p></div>
+            </div>
+            <div class="strategic-bridge" data-reveal>
+                <div><h3>E aqui entra o Método Estrela do Norte</h3><p>A Media.K criou um sistema para sair da leitura genérica de campanha e transformar oportunidade, comportamento e dados em captação mensurável.</p></div>
+                <div class="bridge-flow" aria-label="Fluxo estratégico"><div class="bridge-step">Oportunidade</div><div class="bridge-step">Erro do mercado</div><div class="bridge-step">Método Media.K</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: STRATEGIC SYSTEM -->
+    <section class="section strategic-system" id="como-pensamos">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Como pensamos</span>
+                <h2 class="section-title">Inteligência antes da mídia</h2>
+                <p class="section-subtitle">A Media.K transforma leitura de mercado em hipóteses testáveis, aprendizado operacional e escala com rastreabilidade.</p>
+            </div>
+            <div class="system-map" data-reveal>
+                <div class="system-node"><div class="node-dot">1</div><h4>Mercado</h4><p>Mapeamos tamanho da oportunidade, categoria e maturidade da demanda 50+.</p></div>
+                <div class="system-node"><div class="node-dot">2</div><h4>Perfil</h4><p>Identificamos comportamento, objeções, gatilhos e repertório de decisão.</p></div>
+                <div class="system-node"><div class="node-dot">3</div><h4>Mensagem</h4><p>Desenhamos criativos e argumentos por estágio de confiança.</p></div>
+                <div class="system-node"><div class="node-dot">4</div><h4>Canal</h4><p>Distribuímos mídia por intenção, descoberta e contexto regional.</p></div>
+                <div class="system-node"><div class="node-dot">5</div><h4>Tracking</h4><p>Conectamos clique, lead, atendimento, CRM e BI.</p></div>
+                <div class="system-node"><div class="node-dot">6</div><h4>Escala</h4><p>Realocamos verba para o que vira conversa, agenda e receita.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: METODO -->
+    <section class="section section-dark" id="metodo">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label" style="color: var(--cyan);">Resposta estratégica</span>
+                <h2 class="section-title text-white">Método Estrela do Norte: o sistema para capturar o mercado 50+</h2>
+                <p class="section-subtitle" style="color: #94a3b8;">A oportunidade existe, mas não se captura com campanha genérica. O método conecta leitura de mercado, perfis comportamentais, mídia, CRM e BI para transformar demanda 50+ em crescimento rastreável.</p>
+            </div>
+            <div class="metodo-grid">
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">01 &mdash; DIAGNÓSTICO</div>
+                    <h4>Mapeamento Estratégico</h4>
+                    <p>Auditoria completa do funil atual, análise competitiva no mercado 50+ e identificação de gaps entre investimento e receita.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">02 &mdash; PERFIS</div>
+                    <h4>Segmentação Comportamental</h4>
+                    <p>Aplicação dos 6 perfis comportamentais do consumidor 50+: do perfil Afeto ao Integração, cada segmento recebe criativos e mensagens específicas.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">03 &mdash; ESTRUTURA</div>
+                    <h4>Arquitetura de Campanhas</h4>
+                    <p>Estrutura multicanal com rastreamento end-to-end. Do primeiro clique ao atendimento presencial, cada ponto de contato é mapeado.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">04 &mdash; INTEGRAÇÃO</div>
+                    <h4>Conexão Mídia-CRM-BI</h4>
+                    <p>Integração nativa entre plataformas de mídia, CRM e business intelligence. Comparamos performance por canal, loja e perfil em tempo real.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">05 &mdash; OTIMIZAÇÃO</div>
+                    <h4>Ciclos de Melhoria Contínua</h4>
+                    <p>Otimização semanal baseada em dados reais de conversão, não apenas métricas de vaidade. Realocamos investimento para onde gera receita.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">06 &mdash; ESCALA</div>
+                    <h4>Crescimento Previsível</h4>
+                    <p>Com o funil validado, escalamos investimento com previsibilidade. Cada real adicional tem retorno mensurável e rastreável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: INTELLIGENCE -->
+    <section class="section profile-framework" id="inteligencia">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Framework proprietário</span>
+                <h2 class="section-title">6 perfis comportamentais do consumidor 50+</h2>
+                <p class="section-subtitle">Os perfis ajudam a transformar idade em comportamento: motivação, canal, mensagem e gatilho de decisão.</p>
+            </div>
+            <div class="profile-matrix" data-reveal>
+                <div class="profile-card"><span class="profile-kicker">Perfil 01</span><h4>Afeto</h4><div class="profile-row"><span>Decisão</span><span>Confiança, família e cuidado.</span></div><div class="profile-row"><span>Mensagem</span><span>Proximidade, acolhimento e prova social.</span></div></div>
+                <div class="profile-card"><span class="profile-kicker">Perfil 02</span><h4>Integração</h4><div class="profile-row"><span>Decisão</span><span>Pertencimento e conexão.</span></div><div class="profile-row"><span>Mensagem</span><span>Comunidade, rotina e facilidade.</span></div></div>
+                <div class="profile-card"><span class="profile-kicker">Perfil 03</span><h4>Motivação</h4><div class="profile-row"><span>Decisão</span><span>Energia, descoberta e evolução.</span></div><div class="profile-row"><span>Mensagem</span><span>Novidade, performance e autonomia.</span></div></div>
+                <div class="profile-card"><span class="profile-kicker">Perfil 04</span><h4>Autonomia</h4><div class="profile-row"><span>Decisão</span><span>Independência e controle.</span></div><div class="profile-row"><span>Mensagem</span><span>Clareza, comparação e domínio.</span></div></div>
+                <div class="profile-card"><span class="profile-kicker">Perfil 05</span><h4>Segurança</h4><div class="profile-row"><span>Decisão</span><span>Risco baixo e reputação.</span></div><div class="profile-row"><span>Mensagem</span><span>Garantias, atendimento e evidências.</span></div></div>
+                <div class="profile-card"><span class="profile-kicker">Perfil 06</span><h4>Legado</h4><div class="profile-row"><span>Decisão</span><span>Valor, continuidade e impacto.</span></div><div class="profile-row"><span>Mensagem</span><span>Qualidade, durabilidade e propósito.</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DASHBOARD MOCKUP -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Visibilidade Total</span>
+                <h2 class="section-title">Exemplo de visibilidade operacional entregue pela Media.K.</h2>
+                <p class="section-subtitle">O dashboard mostra quais canais, perfis, regiões e campanhas deixam de ser clique e viram atendimento, agenda e receita.</p>
+            <div class="dashboard-note">Dados ilustrativos para demonstrar a estrutura de decisão</div>
+            </div>
+            <div class="dashboard-mock" data-reveal id="dashboardMock">
+                <div class="dashboard-chrome">
+                    <span class="chrome-dot red"></span>
+                    <span class="chrome-dot yellow"></span>
+                    <span class="chrome-dot green"></span>
+                    <span class="chrome-url">app.mediak.com.br/dashboard</span>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-kpis">
+                        <div class="kpi-card">
+                            <div class="kpi-label">CPL Qualificado</div>
+                            <div class="kpi-value">R$ 28</div>
+                            <div class="kpi-change">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                -12% vs. mês anterior
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">ROAS</div>
+                            <div class="kpi-value">4.2x</div>
+                            <div class="kpi-change">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                +18% vs. mês anterior
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-label">Demandas 50+</div>
+                            <div class="kpi-value">1.847</div>
+                            <div class="kpi-change">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                +24% vs. mês anterior
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-chart">
+                        <div class="chart-header">
+                            <span class="chart-title">Demanda 50+ por Semana</span>
+                            <span class="chart-period">Últimos 30 dias</span>
+                        </div>
+                        <svg viewBox="0 0 800 200" preserveAspectRatio="none" id="dashboardSvgChart">
+                            <!-- Grid lines -->
+                            <line x1="0" y1="50" x2="800" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <!-- Area fill -->
+                            <path d="M0 180 L100 150 L200 130 L300 120 L400 90 L500 70 L600 55 L700 40 L800 25 L800 200 L0 200 Z" fill="url(#chartGradient)" opacity="0.3"/>
+                            <!-- Gradient def -->
+                            <defs>
+                                <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#0574dd" stop-opacity="0.4"/>
+                                    <stop offset="100%" stop-color="#0574dd" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Line -->
+                            <polyline class="chart-line" id="chartLine" points="0,180 100,150 200,130 300,120 400,90 500,70 600,55 700,40 800,25" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Data points -->
+                            <circle cx="0" cy="180" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="100" cy="150" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="200" cy="130" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="300" cy="120" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="400" cy="90" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="500" cy="70" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="600" cy="55" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="700" cy="40" r="4" fill="var(--blue)" opacity="0.8"/>
+                            <circle cx="800" cy="25" r="5" fill="var(--cyan)" stroke="#fff" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                    <div class="dashboard-channels">
+                        <div class="channel-bar-item">
+                            <span class="channel-bar-label">Meta Ads</span>
+                            <div class="channel-bar-track">
+                                <div class="channel-bar-fill meta" data-width="42%" style="width:0%;"></div>
+                            </div>
+                            <span class="channel-bar-pct">42%</span>
+                        </div>
+                        <div class="channel-bar-item">
+                            <span class="channel-bar-label">Google Ads</span>
+                            <div class="channel-bar-track">
+                                <div class="channel-bar-fill google" data-width="35%" style="width:0%;"></div>
+                            </div>
+                            <span class="channel-bar-pct">35%</span>
+                        </div>
+                        <div class="channel-bar-item">
+                            <span class="channel-bar-label">Taboola</span>
+                            <div class="channel-bar-track">
+                                <div class="channel-bar-fill taboola" data-width="23%" style="width:0%;"></div>
+                            </div>
+                            <span class="channel-bar-pct">23%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: COMPARISON -->
+    <section class="section" id="comparacao">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Diferença Clara</span>
+                <h2 class="section-title">Agência tradicional vs Media.K</h2>
+                <p class="section-subtitle">Não é sobre ser melhor ou pior. É sobre ter um método construído para o mercado que você quer dominar.</p>
+            </div>
+            <div class="comparison-grid" data-reveal>
+                <div class="comparison-col traditional">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                        Agência Tradicional
+                    </h3>
+                    <div class="comparison-list">
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Relatórios baseados em métricas de vaidade (impressões, cliques)</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Mesmo criativo para público 25 e 65 anos</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Sem integração entre mídia e vendas reais</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Nenhuma experiência com o consumidor 50+</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Otimização mensal, quando muito</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                            <span>Dashboard genérico, sem visão por loja ou regional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-col mediak">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Media.K
+                    </h3>
+                    <div class="comparison-list">
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Rastreamento do clique ao atendimento presencial</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>6 perfis comportamentais do 50+ com criativos especificos</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Integração completa mídia + CRM + BI</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>15 anos focados exclusivamente no mercado 50+</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Otimização semanal baseada em conversão real</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Comparamos performance por canal, loja e perfil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CLIENTS -->
+    <section class="section section-alt" id="clientes">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Quem Confia</span>
+                <h2 class="section-title">Marcas que confiaram na Media.K para crescer</h2>
+                <p class="section-subtitle">Prova real da estrutura por trás da oportunidade: marcas, parceiros e operações que exigem estratégia, performance e dados.</p>
+            </div>
+            <div class="clients-grid" data-reveal>
+                <div class="clients-subsection">
+                    <h3>Marcas atendidas</h3>
+                    <div class="chips">
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" loading="lazy">AudioNova Brasil</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy">Sonova</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy">Clarins</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy">André Veículos</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/072c1e57dc588bd7aefa2a8364df4e0f57f6756f.473cbe0ff72cd59f.png" alt="ED" loading="lazy">ED</div>
+                    </div>
+                </div>
+                <div class="clients-subsection">
+                    <h3>Parceiros certificados</h3>
+                    <div class="chips">
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google Partner" loading="lazy">Google Partner</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta Business Partner" loading="lazy">Meta Business</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok Ads" loading="lazy">TikTok Ads</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" loading="lazy">Taboola</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/mlabs.65c30cb4c5c17724.png" alt="Mlabs" loading="lazy">Mlabs</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/uappi.de381e1be05f91f6.png" alt="Uappi" loading="lazy">Uappi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CASES -->
+    <section class="section" id="cases">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Resultados Reais</span>
+                <h2 class="section-title">Provas de quem já captura demanda 50+</h2>
+                <p class="section-subtitle">AudioNova, Sonova e Clarins mostram como a oportunidade vira operação quando mídia, CRM e inteligência de dados trabalham juntos.</p>
+            </div>
+            <div class="cases-premium-grid">
+                <article class="case-anchor" data-reveal>
+                    <div class="case-anchor-grid">
+                        <div>
+                            <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde Auditiva | Público 60+</span></div></div>
+                            <div class="case-step"><div class="case-step-label desafio">DESAFIO</div><p>Capturar demanda 60+ em escala nacional para 280 lojas, com rastreamento do clique ao agendamento presencial.</p></div>
+                            <div class="case-step"><div class="case-step-label solucao">SOLUÇÃO</div><p>Funil integrado com CRM + BI por loja, canal e perfil comportamental para identificar onde o mercado 50+ realmente convertia.</p></div>
+                            <div class="case-step"><div class="case-step-label resultado">RESULTADO</div><p>Controle de performance loja a loja para escalar a captura de demanda madura com previsibilidade.</p></div>
+                        </div>
+                        <div class="case-anchor-metrics">
+                            <div class="case-metric"><strong>280</strong><span>lojas integradas à operação</span></div>
+                            <div class="case-metric"><strong>5+</strong><span>anos de parceria</span></div>
+                            <div class="case-metric"><strong>CRM + BI</strong><span>do clique ao atendimento presencial</span></div>
+                            <div class="case-metric"><strong>Multicanal</strong><span>mídia por região, loja e perfil</span></div>
+                        </div>
+                    </div>
+                </article>
+                <div class="case-mini-stack">
+                    <article class="case-mini" data-reveal><div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" class="case-brand-logo" loading="lazy"><div><h4>Clarins</h4><span>Cosméticos Premium</span></div></div><div class="case-step"><div class="case-step-label resultado">FOCO</div><p>Segmentação por perfis comportamentais, Afeto e Integração, com tracking end-to-end para demanda premium.</p></div></article>
+                    <article class="case-mini" data-reveal><div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" class="case-brand-logo" loading="lazy"><div><h4>Sonova</h4><span>Tecnologia em Áudio</span></div></div><div class="case-step"><div class="case-step-label resultado">FOCO</div><p>Distribuição inteligente de investimento por regional e otimização orientada ao atendimento real.</p></div></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CHANNELS -->
+    <section class="section section-alt" id="canais">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Execução</span>
+                <h2 class="section-title">O que entregamos na prática</h2>
+                <p class="section-subtitle">Canais, ferramentas e processos que operam em sincronia para gerar receita previsível.</p>
+            </div>
+            <div class="channels-grid">
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon"><img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google Ads" class="channel-logo" loading="lazy"></div>
+                    <h4>Google Ads</h4>
+                    <p>Search, Display, YouTube e Performance Max com segmentação específica para o comportamento de busca do 50+.</p>
+                </div>
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon"><img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta Ads" class="channel-logo" loading="lazy"></div>
+                    <h4>Meta Ads</h4>
+                    <p>Facebook e Instagram com criativos baseados nos 6 perfis comportamentais. Conversions API implementada para rastreamento preciso.</p>
+                </div>
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon multi-logo"><img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok Ads" class="channel-logo" loading="lazy"><img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" class="channel-logo" loading="lazy"></div>
+                    <h4>TikTok + Taboola</h4>
+                    <p>Alcance em plataformas de descoberta com conteúdo nativo. O 50+ está no TikTok e consome conteúdo em portais de notícias.</p>
+                </div>
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>Tracking + CRM</h4>
+                    <p>Rastreamento end-to-end com integração de CRM. Cada lead é acompanhado do primeiro clique ao fechamento.</p>
+                </div>
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <h4>BI + Dashboards</h4>
+                    <p>Painéis em tempo real com visão por canal, loja, regional e perfil. Você enxerga onde o investimento vira venda.</p>
+                </div>
+                <div class="card channel-card" data-reveal>
+                    <div class="channel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h4>Otimização Contínua</h4>
+                    <p>Ciclos semanais de otimização. Realocamos investimento para onde gera resultado, com base em dados de conversão real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIFFERENTIALS -->
+    <section class="section" id="diferenciais">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Por que a Media.K</span>
+                <h2 class="section-title">O que nos separa do resto</h2>
+                <p class="section-subtitle">Diferenciais construídos ao longo de 15 anos e +100 operações no mercado 50+.</p>
+            </div>
+            <div class="diff-grid">
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(5,116,221,0.06); color: var(--blue);">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <h4>Método Estrela do Norte</h4>
+                    <p>Framework proprietário com 6 etapas validadas em +100 marcas. Não é processo genérico, é inteligência aplicada ao 50+.</p>
+                </div>
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(2,211,241,0.06); color: var(--cyan);">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h4>6 Perfis Comportamentais</h4>
+                    <p>Segmentação exclusiva do consumidor 50+: Afeto, Integração, Motivação, Autonomia, Segurança e Legado.</p>
+                </div>
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(253,59,102,0.06); color: var(--pink);">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <h4>280 Lojas em Paralelo</h4>
+                    <p>Experiência comprovada gerenciando mídia em escala para centenas de pontos de venda simultaneamente.</p>
+                </div>
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(255,212,0,0.08); color: #d97706;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h4>Rastreamento Clique-Venda</h4>
+                    <p>Integração completa entre mídia, CRM e BI. Enxergamos exatamente onde cada real de investimento gera receita.</p>
+                </div>
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(16,185,129,0.06); color: #10b981;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h4>Parceiro Google e Meta</h4>
+                    <p>Certificações oficiais que garantem acesso a betas, suporte prioritário e melhores práticas direto das plataformas.</p>
+                </div>
+                <div class="card diff-card" data-reveal>
+                    <div class="diff-icon" style="background: rgba(124,58,237,0.06); color: #7c3aed;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4>15+ Anos de Foco Exclusivo</h4>
+                    <p>Não somos generalistas que atendem o 50+ eventualmente. É nosso único foco há mais de uma década e meia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LEADERSHIP -->
+    <section class="section section-alt" id="equipe">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Equipe</span>
+                <h2 class="section-title">Por trás da estratégia</h2>
+                <p class="section-subtitle">Liderança com experiência real de mercado e execução comprovada.</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="card leader-card" data-reveal>
+                    <img src="./diego.png" alt="Diego Kanaane" class="leader-photo" loading="lazy">
+                    <h4>Diego Kanaane</h4>
+                    <div class="leader-role">Founder & CEO</div>
+                    <p>15+ anos no mercado 50+. Criou o Método Estrela do Norte e liderou a estratégia de +100 marcas na Silver Economy. Referência em marketing para o público maduro no Brasil.</p>
+                </div>
+                <div class="card leader-card" data-reveal>
+                    <img src="./keith.png" alt="Keith Matsumoto" class="leader-photo" loading="lazy">
+                    <h4>Keith Matsumoto</h4>
+                    <div class="leader-role">Head de Performance</div>
+                    <p>Ex-Google com experiência em grandes contas de mídia paga. Especialista em estruturas de campanha escaláveis e otimização baseada em dados de conversão real.</p>
+                </div>
+                <div class="card leader-card" data-reveal>
+                    <div class="leader-initials">MK</div>
+                    <h4>Equipe Media.K</h4>
+                    <div class="leader-role">Especialistas Multidisciplinares</div>
+                    <p>Time de mídia, dados, CRM e criação focado exclusivamente no mercado 50+. Cada profissional opera com o contexto e a inteligência acumulada em 15 anos de operação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: URGENCY -->
+    <section class="section" id="urgencia">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Timing</span>
+                <h2 class="section-title">Quem dominar o público 50+ primeiro cria uma vantagem dificil de recuperar.</h2>
+            </div>
+            <div class="urgency-grid">
+                <div class="card urgency-card" data-reveal>
+                    <div class="urgency-num">01</div>
+                    <h4>Janela de vantagem competitiva</h4>
+                    <p>A maioria das marcas ainda ignora o 50+. Quem se posiciona agora aprende mais rápido, compra mídia melhor e constrói preferência antes da concorrência.</p>
+                </div>
+                <div class="card urgency-card" data-reveal>
+                    <div class="urgency-num">02</div>
+                    <h4>Custo de aquisição subindo</h4>
+                    <p>À medida que mais marcas descobrem o potencial do 50+, a disputa encarece. Quem já tem funil, CRM e BI integrados entra na fase competitiva com vantagem.</p>
+                </div>
+                <div class="card urgency-card" data-reveal>
+                    <div class="urgency-num">03</div>
+                    <h4>Fidelidade construída com tempo</h4>
+                    <p>O consumidor 50+ valoriza relacionamento. Marcas que começam agora acumulam confiança, dados e recorrência que concorrentes não replicam rapidamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIAGNOSIS -->
+    <section class="section section-dark" id="diagnostico">
+        <div class="container">
+            <div class="diagnosis-grid">
+                <div data-reveal>
+                    <span class="section-label" style="color: var(--cyan);">Exclusivo</span>
+                    <h2 style="color:#fff; margin-bottom: 16px;">Sua empresa está deixando dinheiro na mesa no mercado 50+?</h2>
+                    <p style="color: #94a3b8; margin-bottom: 32px; line-height: 1.8;">Nosso time analisa onde sua marca já tem potencial de capturar demanda 50+, quais barreiras estão travando conversão e quais movimentos podem gerar crescimento nos próximos 90 dias.</p>
+                    <ul class="diagnosis-benefits">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Análise da oportunidade 50+ dentro do seu segmento</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Mapeamento das barreiras de comunicação, mídia e CRM que podem estar travando receita</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Leitura de quais canais e mensagens tendem a capturar demanda qualificada</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Recomendações práticas para os próximos 90 dias</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Resposta personalizada em até 24 horas úteis</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-reveal>
+                    <div id="diagFormContent">
+                        <form id="diagForm" class="form-dark" novalidate>
+                            <div class="form-group">
+                                <label for="diagNome">Nome *</label>
+                                <input type="text" id="diagNome" name="nome" placeholder="Seu nome completo" required>
+                                <span class="error-msg">Por favor, informe seu nome.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="diagEmail">E-mail *</label>
+                                <input type="email" id="diagEmail" name="email" placeholder="seu@email.com" required>
+                                <span class="error-msg">Por favor, informe um e-mail válido.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="diagTel">Telefone *</label>
+                                <input type="tel" id="diagTel" name="telefone" class="phone-mask" placeholder="(00) 00000-0000" required>
+                                <span class="error-msg">Por favor, informe um telefone válido.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="diagEmpresa">Empresa *</label>
+                                <input type="text" id="diagEmpresa" name="empresa" placeholder="Nome da sua empresa" required>
+                                <span class="error-msg">Por favor, informe sua empresa.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="diagSegmento">Segmento</label>
+                                <select id="diagSegmento" name="segmento">
+                                    <option value="">Selecione seu segmento</option>
+                                    <option value="saude">Saúde e Bem-estar</option>
+                                    <option value="varejo">Varejo</option>
+                                    <option value="financeiro">Serviços Financeiros</option>
+                                    <option value="educacao">Educação</option>
+                                    <option value="turismo">Turismo</option>
+                                    <option value="tecnologia">Tecnologia</option>
+                                    <option value="imobiliario">Imobiliário</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-white" style="width:100%;" aria-label="Solicitar diagnóstico gratuito">Solicitar Diagnóstico Gratuito &rarr;</button>
+                        </form>
+                    </div>
+                    <div id="diagFormSuccess" class="form-success">
+                        <div class="success-icon" style="background: rgba(2,211,241,0.15);">&#10003;</div>
+                        <h4 style="color: var(--cyan);">Diagnóstico solicitado!</h4>
+                        <p style="color: #94a3b8;">Recebemos sua solicitação. Nossa equipe entrará em contato em até 24h com sua análise personalizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MAIN FORM -->
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Contato</span>
+                <h2 class="section-title">Vamos conversar sobre crescimento?</h2>
+                <p class="section-subtitle">Conte sobre sua operação. Nosso time responde com uma proposta personalizada.</p>
+            </div>
+            <div class="main-form-grid">
+                <div class="main-form-trust" data-reveal>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Dados Protegidos</h4>
+                            <p>Suas informações são tratadas com total sigilo e segurança.</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h4>Resposta em 24h</h4>
+                            <p>Nosso time responde com uma análise personalizada rapidamente.</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <div>
+                            <h4>Sem Compromisso</h4>
+                            <p>O diagnóstico é gratuito. Você decide se faz sentido seguir.</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div>
+                            <h4>Google & Meta Partner</h4>
+                            <p>Certificações oficiais das maiores plataformas de mídia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card main-form-card" data-reveal>
+                    <div id="mainFormContent">
+                        <form id="mainForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="mainNome">Nome *</label>
+                                    <input type="text" id="mainNome" name="nome" placeholder="Seu nome" required>
+                                    <span class="error-msg">Por favor, informe seu nome.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mainEmpresa">Empresa *</label>
+                                    <input type="text" id="mainEmpresa" name="empresa" placeholder="Nome da empresa" required>
+                                    <span class="error-msg">Por favor, informe sua empresa.</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="mainEmail">E-mail *</label>
+                                    <input type="email" id="mainEmail" name="email" placeholder="seu@email.com" required>
+                                    <span class="error-msg">Por favor, informe um e-mail válido.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mainTel">Telefone *</label>
+                                    <input type="tel" id="mainTel" name="telefone" class="phone-mask" placeholder="(00) 00000-0000" required>
+                                    <span class="error-msg">Por favor, informe um telefone válido.</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="mainSegmento">Segmento</label>
+                                    <select id="mainSegmento" name="segmento">
+                                        <option value="">Selecione</option>
+                                        <option value="saude">Saúde e Bem-estar</option>
+                                        <option value="varejo">Varejo</option>
+                                        <option value="financeiro">Serviços Financeiros</option>
+                                        <option value="educacao">Educação</option>
+                                        <option value="turismo">Turismo</option>
+                                        <option value="tecnologia">Tecnologia</option>
+                                        <option value="imobiliario">Imobiliário</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mainPorte">Porte da empresa</label>
+                                    <select id="mainPorte" name="porte">
+                                        <option value="">Selecione</option>
+                                        <option value="mei">MEI</option>
+                                        <option value="pequena">Pequena (até 50 funcionários)</option>
+                                        <option value="media">Média (50 a 500 funcionários)</option>
+                                        <option value="grande">Grande (500+ funcionários)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mainMensagem">Mensagem</label>
+                                <textarea id="mainMensagem" name="mensagem" placeholder="Conte sobre seu objetivo no mercado 50+..." rows="4"></textarea>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mainPrivacy" name="privacy" required>
+                                <label for="mainPrivacy">Concordo com a <a href="https://www.mediak.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> e autorizo o contato pela Media.K.</label>
+                            </div>
+                            <span class="error-msg" id="privacyError" style="margin-top:-12px; margin-bottom:12px;">Você precisa concordar com a política de privacidade.</span>
+                            <button type="submit" class="btn btn-primary" style="width:100%;" aria-label="Enviar formulário de contato">Enviar Mensagem &rarr;</button>
+                        </form>
+                    </div>
+                    <div id="mainFormSuccess" class="form-success">
+                        <div class="success-icon">&#10003;</div>
+                        <h4>Mensagem enviada!</h4>
+                        <p>Obrigado pelo interesse. Nosso time entrará em contato em até 24h com uma proposta personalizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Perguntas frequentes</h2>
+                <p class="section-subtitle">Respostas diretas para as dúvidas mais comuns de quem avalia investir no mercado 50+.</p>
+            </div>
+            <div class="faq-list" data-reveal>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Meu público não é exclusivamente 50+. A Media.K atende?">
+                        <span>Meu público não é exclusivamente 50+. A Media.K atende?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Sim. Muitos dos nossos clientes tem público misto, mas identificaram que o 50+ representa uma parcela crescente e rentável do faturamento. Atuamos especificamente nessa faixa, sem interferir nas estratégias já existentes para outras audiências.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Quanto tempo leva para ver resultados?">
+                        <span>Quanto tempo leva para ver resultados?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Os primeiros leads qualificados costumam aparecer nas primeiras 2 a 4 semanas. O ciclo completo de otimização com funil integrado se estabiliza em 60 a 90 dias, quando começamos a ter dados de conversão real para otimizar com precisão.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Qual o investimento mínimo em mídia?">
+                        <span>Qual o investimento mínimo em mídia?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Não temos um valor fixo. O investimento ideal depende do segmento, abrangência geográfica e objetivos. No diagnóstico gratuito, apresentamos cenários com projeções de resultado para diferentes níveis de investimento.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Vocês atendem empresas fora de São Paulo?">
+                        <span>Vocês atendem empresas fora de São Paulo?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Sim, atuamos em todo o território nacional. Gerenciamos 280 lojas da AudioNova distribuídas por todo o Brasil. Nossa operação é digital-first, com dashboards em tempo real acessíveis de qualquer lugar.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Como funciona a integração com nosso CRM?">
+                        <span>Como funciona a integração com nosso CRM?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Nos integramos com os principais CRMs do mercado (Salesforce, HubSpot, Pipedrive, RD Station e outros). O objetivo é conectar dados de mídia com dados de venda real, para que você enxergue o retorno de cada canal com precisão.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Qual a diferença entre a Media.K e uma agência de performance?">
+                        <span>Qual a diferença entre a Media.K e uma agência de performance?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Agências de performance operam campanhas. Nos operamos um sistema integrado de crescimento. Além da mídia, entregamos inteligência comportamental do 50+, integração com CRM, BI proprietário e otimização baseada em venda real, não em cliques.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-label="Existe fidelidade contratual?">
+                        <span>Existe fidelidade contratual?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--body)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Recomendamos um período mínimo de 90 dias para que o método entregue resultados mensuráveis. Após esse período, a continuidade depende dos resultados. Nosso melhor argumento de retenção é a performance, não o contrato.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FOOTER -->
+    <footer class="footer" id="rodape">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="https://www.mediak.com.br/icon.png" alt="Media.K" width="32" height="32" loading="lazy">
+                        <span>Media.K</span>
+                    </div>
+                    <p>Ajudamos marcas a acessar o mercado 50+ com método próprio, integração completa e resultados mensuráveis.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/mediak.com.br" target="_blank" rel="noopener" aria-label="Instagram da Media.K">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/mediak" target="_blank" rel="noopener" aria-label="LinkedIn da Media.K">
+                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@mediak" target="_blank" rel="noopener" aria-label="YouTube da Media.K">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@mediak" target="_blank" rel="noopener" aria-label="TikTok da Media.K">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="#cases">Cases</a>
+                    <a href="#metodo">Método</a>
+                    <a href="#equipe">Equipe</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <a href="#canais">Google Ads</a>
+                    <a href="#canais">Meta Ads</a>
+                    <a href="#canais">TikTok Ads</a>
+                    <a href="#canais">BI & Dashboards</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <a href="https://www.mediak.com.br" target="_blank" rel="noopener">mediak.com.br</a>
+                    <a href="#contato">Fale Conosco</a>
+                    <a href="#diagnostico">Diagnóstico Gratuito</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Media.K. Todos os direitos reservados.</p>
+                <p>CNPJ: Consulte em mediak.com.br</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA (MOBILE) -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#diagnostico" class="btn btn-primary" aria-label="Solicitar diagnóstico">Solicitar Diagnóstico &rarr;</a>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ============================================
+            // PROGRESS BAR
+            // ============================================
+            var progressBar = document.getElementById('progressBar');
+            function updateProgress() {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+
+            // ============================================
+            // NAVBAR SCROLL
+            // ============================================
+            var navbar = document.getElementById('navbar');
+            function handleNavbarScroll() {
+                if (window.pageYOffset > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+
+            // ============================================
+            // HAMBURGER MENU
+            // ============================================
+            var hamburger = document.getElementById('hamburger');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var mobileOverlay = document.getElementById('mobileOverlay');
+
+            function toggleMenu() {
+                var isActive = hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
+            }
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', closeMenu);
+
+            // Close menu when clicking links
+            var mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // ============================================
+            // SMOOTH SCROLL
+            // ============================================
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        var offset = navbar.offsetHeight + 16;
+                        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ============================================
+            // PHONE MASK (00) 00000-0000
+            // ============================================
+            function applyPhoneMask(input) {
+                input.addEventListener('input', function(e) {
+                    var value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 11) value = value.slice(0, 11);
+
+                    var formatted = '';
+                    if (value.length > 0) {
+                        formatted = '(' + value.slice(0, 2);
+                    }
+                    if (value.length > 2) {
+                        formatted += ') ' + value.slice(2, 7);
+                    }
+                    if (value.length > 7) {
+                        formatted += '-' + value.slice(7, 11);
+                    }
+
+                    e.target.value = formatted;
+                });
+            }
+
+            document.querySelectorAll('.phone-mask').forEach(applyPhoneMask);
+
+            // ============================================
+            // SCROLL REVEAL (IntersectionObserver)
+            // ============================================
+            var revealElements = document.querySelectorAll('[data-reveal]');
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // ============================================
+            // COUNTER ANIMATION (easeOutQuart)
+            // ============================================
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function animateCounter(element) {
+                var target = parseInt(element.getAttribute('data-counter'));
+                var prefix = element.getAttribute('data-prefix') || '';
+                var suffix = element.getAttribute('data-suffix') || '';
+                var duration = 2000;
+                var start = null;
+
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    var progress = Math.min((timestamp - start) / duration, 1);
+                    var easedProgress = easeOutQuart(progress);
+                    var current = Math.floor(easedProgress * target);
+                    element.textContent = prefix + current.toLocaleString('pt-BR') + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        element.textContent = prefix + target.toLocaleString('pt-BR') + suffix;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            var counterElements = document.querySelectorAll('[data-counter]');
+            var counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            counterElements.forEach(function(el) {
+                counterObserver.observe(el);
+            });
+
+            // ============================================
+            // FAQ ACCORDION
+            // ============================================
+            document.querySelectorAll('.faq-question').forEach(function(question) {
+                question.addEventListener('click', function() {
+                    var item = this.parentElement;
+                    var answer = item.querySelector('.faq-answer');
+                    var inner = answer.querySelector('.faq-answer-inner');
+                    var isActive = item.classList.contains('active');
+
+                    // Close all
+                    document.querySelectorAll('.faq-item.active').forEach(function(activeItem) {
+                        activeItem.classList.remove('active');
+                        activeItem.querySelector('.faq-answer').style.maxHeight = '0';
+                        activeItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open clicked if not already active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = inner.scrollHeight + 'px';
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+
+                question.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // ============================================
+            // FORM VALIDATION & SUBMISSION
+            // ============================================
+            function validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            function validatePhone(phone) {
+                var digits = phone.replace(/\D/g, '');
+                return digits.length >= 10 && digits.length <= 11;
+            }
+
+            function showFieldError(field) {
+                field.classList.add('error');
+                var msg = field.parentElement.querySelector('.error-msg');
+                if (msg) msg.classList.add('visible');
+            }
+
+            function clearFieldError(field) {
+                field.classList.remove('error');
+                var msg = field.parentElement.querySelector('.error-msg');
+                if (msg) msg.classList.remove('visible');
+            }
+
+            // Live validation on blur
+            document.querySelectorAll('form input, form select, form textarea').forEach(function(field) {
+                field.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        showFieldError(this);
+                    } else if (this.type === 'email' && this.value && !validateEmail(this.value)) {
+                        showFieldError(this);
+                    } else if (this.classList.contains('phone-mask') && this.value && !validatePhone(this.value)) {
+                        showFieldError(this);
+                    } else {
+                        clearFieldError(this);
+                    }
+                });
+
+                field.addEventListener('input', function() {
+                    if (this.classList.contains('error')) {
+                        clearFieldError(this);
+                    }
+                });
+            });
+
+            // Hero form
+            document.getElementById('heroForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var valid = true;
+                var form = this;
+
+                var nome = form.querySelector('#heroNome');
+                var empresa = form.querySelector('#heroEmpresa');
+                var whatsapp = form.querySelector('#heroWhatsapp');
+
+                if (!nome.value.trim()) { showFieldError(nome); valid = false; } else { clearFieldError(nome); }
+                if (!empresa.value.trim()) { showFieldError(empresa); valid = false; } else { clearFieldError(empresa); }
+                if (!whatsapp.value.trim() || !validatePhone(whatsapp.value)) { showFieldError(whatsapp); valid = false; } else { clearFieldError(whatsapp); }
+
+                if (!valid) return;
+
+                // TODO: Integrate webhook here (n8n/Make/Zapier)
+                // Example: fetch('YOUR_WEBHOOK_URL', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(formData) })
+
+                var formData = {
+                    nome: nome.value,
+                    empresa: empresa.value,
+                    whatsapp: whatsapp.value,
+                    segmento: form.querySelector('#heroSegmento').value,
+                    source: 'hero_form'
+                };
+                console.log('Hero form data:', formData);
+
+                document.getElementById('heroFormContent').style.display = 'none';
+                document.getElementById('heroFormSuccess').classList.add('visible');
+            });
+
+            // Diagnosis form
+            document.getElementById('diagForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var valid = true;
+                var form = this;
+
+                var nome = form.querySelector('#diagNome');
+                var email = form.querySelector('#diagEmail');
+                var tel = form.querySelector('#diagTel');
+                var empresa = form.querySelector('#diagEmpresa');
+
+                if (!nome.value.trim()) { showFieldError(nome); valid = false; } else { clearFieldError(nome); }
+                if (!email.value.trim() || !validateEmail(email.value)) { showFieldError(email); valid = false; } else { clearFieldError(email); }
+                if (!tel.value.trim() || !validatePhone(tel.value)) { showFieldError(tel); valid = false; } else { clearFieldError(tel); }
+                if (!empresa.value.trim()) { showFieldError(empresa); valid = false; } else { clearFieldError(empresa); }
+
+                if (!valid) return;
+
+                // TODO: Integrate webhook here (n8n/Make/Zapier)
+                // Example: fetch('YOUR_WEBHOOK_URL', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(formData) })
+
+                var formData = {
+                    nome: nome.value,
+                    email: email.value,
+                    telefone: tel.value,
+                    empresa: empresa.value,
+                    segmento: form.querySelector('#diagSegmento').value,
+                    source: 'diagnosis_form'
+                };
+                console.log('Diagnosis form data:', formData);
+
+                document.getElementById('diagFormContent').style.display = 'none';
+                document.getElementById('diagFormSuccess').classList.add('visible');
+            });
+
+            // Main form
+            document.getElementById('mainForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var valid = true;
+                var form = this;
+
+                var nome = form.querySelector('#mainNome');
+                var empresa = form.querySelector('#mainEmpresa');
+                var email = form.querySelector('#mainEmail');
+                var tel = form.querySelector('#mainTel');
+                var privacy = form.querySelector('#mainPrivacy');
+                var privacyError = document.getElementById('privacyError');
+
+                if (!nome.value.trim()) { showFieldError(nome); valid = false; } else { clearFieldError(nome); }
+                if (!empresa.value.trim()) { showFieldError(empresa); valid = false; } else { clearFieldError(empresa); }
+                if (!email.value.trim() || !validateEmail(email.value)) { showFieldError(email); valid = false; } else { clearFieldError(email); }
+                if (!tel.value.trim() || !validatePhone(tel.value)) { showFieldError(tel); valid = false; } else { clearFieldError(tel); }
+
+                if (!privacy.checked) {
+                    privacyError.classList.add('visible');
+                    valid = false;
+                } else {
+                    privacyError.classList.remove('visible');
+                }
+
+                if (!valid) return;
+
+                // TODO: Integrate webhook here (n8n/Make/Zapier)
+                // Example: fetch('YOUR_WEBHOOK_URL', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(formData) })
+
+                var formData = {
+                    nome: nome.value,
+                    empresa: empresa.value,
+                    email: email.value,
+                    telefone: tel.value,
+                    segmento: form.querySelector('#mainSegmento').value,
+                    porte: form.querySelector('#mainPorte').value,
+                    mensagem: form.querySelector('#mainMensagem').value,
+                    source: 'main_form'
+                };
+                console.log('Main form data:', formData);
+
+                document.getElementById('mainFormContent').style.display = 'none';
+                document.getElementById('mainFormSuccess').classList.add('visible');
+            });
+
+            // ============================================
+            // FLOATING CTA VISIBILITY
+            // ============================================
+            var floatingCta = document.getElementById('floatingCta');
+            var contatoSection = document.getElementById('contato');
+
+            var floatingObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        floatingCta.classList.add('hidden');
+                    } else {
+                        floatingCta.classList.remove('hidden');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            if (contatoSection) {
+                floatingObserver.observe(contatoSection);
+            }
+
+            // Also observe diagnostico section
+            var diagSection = document.getElementById('diagnostico');
+            if (diagSection) {
+                var diagObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            floatingCta.classList.add('hidden');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                diagObserver.observe(diagSection);
+            }
+
+            // ============================================
+            // DASHBOARD CHART ANIMATION
+            // ============================================
+            var chartLine = document.getElementById('chartLine');
+            var dashboardMock = document.getElementById('dashboardMock');
+            var channelBars = document.querySelectorAll('.channel-bar-fill');
+
+            var dashboardObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        // Animate line chart
+                        if (chartLine) {
+                            chartLine.classList.add('animated');
+                        }
+                        // Animate channel bars
+                        channelBars.forEach(function(bar) {
+                            var targetWidth = bar.getAttribute('data-width');
+                            setTimeout(function() {
+                                bar.style.width = targetWidth;
+                                bar.classList.add('animated');
+                            }, 400);
+                        });
+                        dashboardObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            if (dashboardMock) {
+                dashboardObserver.observe(dashboardMock);
+            }
+
+            // ============================================
+            // SCROLL EVENT LISTENER (throttled)
+            // ============================================
+            var ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        updateProgress();
+                        handleNavbarScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Initial calls
+            updateProgress();
+            handleNavbarScroll();
+        })();
+    </script>
+</body>
+</html>
+
+

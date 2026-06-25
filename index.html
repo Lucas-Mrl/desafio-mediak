@@ -2855,6 +2855,92 @@
         @media (max-width:640px) { .silver-node{width:112px;} .silver-core strong{font-size:3rem;} .silver-orbit{width:100%;} .operation-core{width:150px;height:150px;} .operation-core strong{font-size:3.2rem;} .operation-link{width:118px;padding:12px;} .audionova-operation,.profile-lab-shell,.contact-cta-box{padding:22px;} }
 
         /* ============================================
+           NARRATIVE REORDER POLISH
+           ============================================ */
+        #clientes {
+            padding-top: 72px;
+            padding-bottom: 76px;
+        }
+
+        #oportunidade-50,
+        #silver-economy,
+        #cases,
+        #dashboard,
+        #metodo,
+        #inteligencia,
+        #como-pensamos,
+        #insights,
+        #equipe,
+        #podcast60 {
+            scroll-margin-top: 88px;
+        }
+
+        #cases {
+            padding-top: 112px;
+            padding-bottom: 108px;
+        }
+
+        #dashboard {
+            padding-top: 104px;
+        }
+
+        #metodo,
+        #inteligencia,
+        #como-pensamos,
+        #insights,
+        #equipe,
+        #podcast60 {
+            padding-top: 104px;
+            padding-bottom: 104px;
+        }
+
+        #comparacao,
+        .system-execution,
+        .proof-strip-section {
+            padding-top: 78px;
+            padding-bottom: 78px;
+        }
+
+        #comparacao .section-header,
+        .system-execution .section-header,
+        .proof-strip-section .section-header {
+            margin-bottom: 34px;
+        }
+
+        .visual-break-operation {
+            padding-top: 48px;
+            padding-bottom: 22px;
+        }
+
+        .visual-break-operation + #cases {
+            padding-top: 88px;
+        }
+
+        .visual-break-profiles {
+            padding-top: 30px;
+            padding-bottom: 26px;
+        }
+
+        #podcast60 + #urgencia {
+            padding-top: 98px;
+        }
+
+        @media (max-width: 768px) {
+            #cases,
+            #dashboard,
+            #metodo,
+            #inteligencia,
+            #como-pensamos,
+            #insights,
+            #equipe,
+            #podcast60 {
+                padding-top: 78px;
+                padding-bottom: 78px;
+            }
+        }
+
+
+        /* ============================================
            PODCAST 60+ AUTHORITY
            ============================================ */
         .podcast-section {
@@ -3492,8 +3578,7 @@
 <body>
     <!-- PROGRESS BAR -->
     <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Progresso da pagina"></div>
-
-    <!-- SECTION: NAVBAR -->
+<!-- SECTION: NAVBAR -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
         <div class="container">
             <a href="#" class="navbar-logo" aria-label="Media.K - Página inicial">
@@ -3532,7 +3617,7 @@
         <a href="#diagnostico" class="btn btn-primary">Diagnóstico Gratuito</a>
     </div>
 
-    <!-- SECTION: HERO -->
+<!-- SECTION: HERO -->
     <section class="hero" id="topo">
         <div class="container">
             <div class="hero-copy">
@@ -3582,7 +3667,7 @@
         </div>
     </section>
 
-    <!-- SECTION: TRUST BAR -->
+<!-- SECTION: TRUST BAR -->
     <div class="trust-bar">
         <div class="container">
             <div class="trust-item">
@@ -3618,7 +3703,41 @@
         </div>
     </div>
 
-    <!-- SECTION: BUSINESS OPPORTUNITY -->
+<!-- SECTION: CLIENTS -->
+    <section class="section section-alt" id="clientes">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label">Quem Confia</span>
+                <h2 class="section-title">Marcas que confiaram na Media.K para crescer</h2>
+                <p class="section-subtitle">Prova real da estrutura por trás da oportunidade: marcas, parceiros e operações que exigem estratégia, performance e dados.</p>
+            </div>
+            <div class="clients-grid" data-reveal>
+                <div class="clients-subsection">
+                    <h3>Marcas atendidas</h3>
+                    <div class="chips">
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" loading="lazy">AudioNova Brasil</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy">Sonova</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy">Clarins</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy">André Veículos</div>
+                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/072c1e57dc588bd7aefa2a8364df4e0f57f6756f.473cbe0ff72cd59f.png" alt="ED" loading="lazy">ED</div>
+                    </div>
+                </div>
+                <div class="clients-subsection">
+                    <h3>Parceiros certificados</h3>
+                    <div class="chips">
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google Partner" loading="lazy">Google Partner</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta Business Partner" loading="lazy">Meta Business</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok Ads" loading="lazy">TikTok Ads</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" loading="lazy">Taboola</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/mlabs.65c30cb4c5c17724.png" alt="Mlabs" loading="lazy">Mlabs</div>
+                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/uappi.de381e1be05f91f6.png" alt="Uappi" loading="lazy">Uappi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECTION: BUSINESS OPPORTUNITY -->
     <section class="section" id="oportunidade-50">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -3661,7 +3780,7 @@
         </div>
     </section>
 
-    <!-- SECTION: SILVER ECONOMY NUMBERS -->
+<!-- SECTION: SILVER ECONOMY NUMBERS -->
     <section class="section silver-wow-section" id="silver-economy">
         <div class="container">
             <div class="silver-wow-grid">
@@ -3693,7 +3812,7 @@
         </div>
     </section>
 
-        <!-- VISUAL BREAK: OPPORTUNITY -->
+<!-- VISUAL BREAK: OPPORTUNITY -->
     <section class="visual-break visual-break-opportunity" id="banner-oportunidade" aria-label="Oportunidade 50+">
         <div class="container">
             <div class="visual-banner" data-reveal>
@@ -3730,107 +3849,89 @@
         </div>
     </section>
 
-    <!-- SECTION: STRATEGIC SYSTEM -->
-    <section class="section strategic-system" id="como-pensamos">
+<!-- VISUAL BREAK: OPERATION -->
+    <section class="visual-break visual-break-operation" id="banner-operacao" aria-label="Estratégia conectada à operação">
+        <div class="container">
+            <div class="visual-banner" data-reveal>
+                <img src="./banner-operacao.png" alt="Equipe analisando dashboards e dados em sala de controle estratégica" loading="lazy">
+                <div class="visual-banner-content">
+                    <span>Da estratégia à escala</span>
+                    <h2>Da leitura comportamental à operação nacional.</h2>
+                    <p>Quando mídia, dados e atendimento se conectam, oportunidade vira sistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECTION: CASES -->
+    <section class="section cases-theater" id="cases">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Como pensamos</span>
-                <h2 class="section-title">Inteligência antes da mídia</h2>
-                <p class="section-subtitle">Antes de escalar verba, a Media.K define hipótese, sinal e decisão.</p>
+                <span class="section-label">Prova de escala</span>
+                <h2 class="section-title">AudioNova não é um case. É uma operação nacional.</h2>
+                <p class="section-subtitle">280 lojas, múltiplos canais, sinais regionais e atendimento conectados em uma só leitura.</p>
             </div>
-            <div class="system-map compact-system-map" data-reveal>
-                <div class="system-node"><div class="node-dot">1</div><h4>Mercado</h4><p>Tamanho, categoria e janela competitiva.</p></div>
-                <div class="system-node"><div class="node-dot">2</div><h4>Perfil</h4><p>Gatilho, objeção e repertório.</p></div>
-                <div class="system-node"><div class="node-dot">3</div><h4>Mensagem</h4><p>Prova, clareza e estágio de confiança.</p></div>
-                <div class="system-node"><div class="node-dot">4</div><h4>Canal</h4><p>Intenção, descoberta e região.</p></div>
-                <div class="system-node"><div class="node-dot">5</div><h4>Sinal</h4><p>Lead, agenda, loja e qualidade.</p></div>
-                <div class="system-node"><div class="node-dot">6</div><h4>Escala</h4><p>Verba realocada pelo que avança.</p></div>
+            <div class="audionova-operation" data-reveal>
+                <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde auditiva | público 60+ | presença nacional</span></div></div>
+                <div class="operation-scale-ribbon"><span>Meta</span><i></i><span>Google</span><i></i><span>CRM</span><i></i><span>BI</span><i></i><span>Atendimento</span></div>
+                <div class="operation-map"><div class="store-cloud" aria-hidden="true"><span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span><span style="--i:12"></span><span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span><span style="--i:16"></span><span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span><span style="--i:20"></span><span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span><span style="--i:24"></span><span style="--i:25"></span><span style="--i:26"></span><span style="--i:27"></span></div>
+                    <div class="operation-core"><strong>280</strong><span>lojas conectadas</span><small>operação nacional</small></div>
+                    <div class="operation-link link-1"><b>Meta</b><span>descoberta</span></div>
+                    <div class="operation-link link-2"><b>Google</b><span>intenção</span></div>
+                    <div class="operation-link link-3"><b>CRM</b><span>follow-up</span></div>
+                    <div class="operation-link link-4"><b>BI</b><span>decisão</span></div>
+                    <div class="operation-link link-5"><b>Loja</b><span>atendimento</span></div>
+                </div>
+                <div class="operation-notes">
+                    <div><span>Desafio</span><p>Distribuir interesse 60+ por região, canal e unidade.</p></div>
+                    <div><span>Complexidade</span><p>Perfil, origem, loja e qualidade lidos no mesmo painel.</p></div>
+                    <div><span>Escala</span><p>Decisão de verba, pausa e follow-up guiada por sinal real.</p></div>
+                </div>
+            </div>
+            <div class="case-mini-strip" data-reveal>
+                <article><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy"><strong>Clarins</strong><span>demanda premium por perfil</span></article>
+                <article><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy"><strong>Sonova</strong><span>dados e tecnologia em áudio</span></article>
+                <article><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy"><strong>André Veículos</strong><span>performance e presença regional</span></article>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: METODO -->
-
-    <!-- SECTION: MEDIAK INSIGHTS -->
-    <section class="section insights-section" id="insights">
+<!-- SECTION: DASHBOARD MOCKUP -->
+    <section class="dashboard-section dashboard-command" id="dashboard">
         <div class="container">
-            <div class="insights-grid" data-reveal>
-                <div>
-                    <span class="section-label">Insights da Media.K</span>
-                    <h2 class="section-title">O que aprendemos observando o consumidor 50+</h2>
-                    <p class="section-subtitle">A vantagem não está em falar mais alto. Está em reconhecer sinais que a mídia genérica ignora.</p>
-                </div>
-                <div class="insights-board">
-                    <div class="insight-row"><span>01</span><strong>Confiança vem antes da oferta.</strong><em>Sem clareza, o clique não vira conversa.</em></div>
-                    <div class="insight-row"><span>02</span><strong>Canal muda por intenção.</strong><em>Busca, social e CRM cumprem papéis diferentes.</em></div>
-                    <div class="insight-row"><span>03</span><strong>Idade não explica comportamento.</strong><em>Perfil, objeção e momento de vida explicam mais.</em></div>
-                    <div class="insight-row"><span>04</span><strong>Atendimento é parte da mídia.</strong><em>Performance termina onde a operação responde.</em></div>
-                </div>
+            <div class="section-header" data-reveal>
+                <span class="section-label">Central de operação</span>
+                <h2 class="section-title">Dashboard com cara de uso diário.</h2>
+                <p class="section-subtitle">Filtros, origem do lead, loja, região, perfil e status em uma leitura operacional.</p>
+                <div class="dashboard-note">Estrutura ilustrativa</div>
             </div>
-        </div>
-    </section>
-<!-- SECTION: PODCAST 60+ -->
-    <section class="section podcast-section" id="podcast60">
-        <div class="container">
-            <div class="podcast-feature" data-reveal>
-                <div class="podcast-media">
-                    <img src="https://www.mediak.com.br/_next/static/media/podcast60.1e167c40f2be23d5.webp" alt="Podcast 60+ da Media.K" loading="lazy">
-                </div>
-                <div class="podcast-copy">
-                    <span class="section-label">Podcast 60+</span>
-                    <h2 class="section-title">A Media.K também ajuda a construir a conversa sobre a Silver Economy.</h2>
-                    <p class="section-subtitle">Com convidados, especialistas e temas sobre consumo, comportamento e longevidade, o Podcast 60+ reforça uma visão proprietária do público maduro.</p>
-                    <div class="podcast-signals" aria-label="Temas do Podcast 60+">
-                        <span>comportamento</span><span>consumo</span><span>longevidade</span><span>tendências</span>
+            <div class="dashboard-mock real-dashboard" data-reveal id="dashboardMock">
+                <div class="dashboard-chrome"><span class="chrome-dot red"></span><span class="chrome-dot yellow"></span><span class="chrome-dot green"></span><span class="chrome-url">Media.K BI / Audiences / 50+ / lojas</span></div>
+                <div class="dashboard-content command-grid">
+                    <aside class="dashboard-sidebar"><strong>Filtros</strong><span>Região: Brasil</span><span>Perfil: 50+</span><span>Canal: Meta + Google</span><span>Status: agendamento</span></aside>
+                    <div class="dashboard-main">
+                        <div class="dashboard-kpis">
+                            <div class="kpi-card"><div class="kpi-label">Leads qualificados</div><div class="kpi-value">1.847</div><div class="kpi-change">+24% no período</div></div>
+                            <div class="kpi-card"><div class="kpi-label">Lojas com demanda</div><div class="kpi-value">280</div><div class="kpi-change">visão nacional</div></div>
+                            <div class="kpi-card"><div class="kpi-label">Perfis ativos</div><div class="kpi-value">6</div><div class="kpi-change">mensagens por intenção</div></div>
+                        </div>
+                        <div class="dashboard-chart ops-chart"><div class="chart-header"><span class="chart-title">Demanda por etapa do funil</span><span class="chart-period">semana atual</span></div><div class="funnel-bars"><div><span>Busca</span><i style="height:84%"></i></div><div><span>Lead</span><i style="height:68%"></i></div><div><span>CRM</span><i style="height:52%"></i></div><div><span>Agenda</span><i style="height:38%"></i></div><div><span>Loja</span><i style="height:31%"></i></div></div></div>
+                        <div class="dashboard-channels"><div class="channel-bar-item"><span>Google Search</span><div class="channel-bar"><div class="channel-bar-fill" data-width="82%"></div></div><strong>82%</strong></div><div class="channel-bar-item"><span>Meta Ads</span><div class="channel-bar"><div class="channel-bar-fill" data-width="74%"></div></div><strong>74%</strong></div><div class="channel-bar-item"><span>CRM Follow-up</span><div class="channel-bar"><div class="channel-bar-fill" data-width="66%"></div></div><strong>66%</strong></div><div class="channel-bar-item"><span>Regional Sul</span><div class="channel-bar"><div class="channel-bar-fill" data-width="58%"></div></div><strong>58%</strong></div></div>
+                        <div class="dashboard-worktable">
+                            <div><span>Loja</span><span>Perfil dominante</span><span>Próxima ação</span><span>Status</span></div>
+                            <div><strong>SP-042</strong><span>Segurança</span><span>retorno humano</span><em>prioridade</em></div>
+                            <div><strong>RJ-018</strong><span>Afeto</span><span>prova social</span><em>nutrição</em></div>
+                            <div><strong>MG-031</strong><span>Autonomia</span><span>comparativo</span><em>teste</em></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-dark" id="metodo">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-label" style="color: var(--cyan);">Resposta estratégica</span>
-                <h2 class="section-title text-white">Método Estrela do Norte: da leitura ao ganho operacional</h2>
-                <p class="section-subtitle" style="color: #94a3b8;">Um sistema em 6 movimentos: entender, segmentar, estruturar, integrar, otimizar e escalar.</p>
-            </div>
-            <div class="metodo-grid">
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">01 &mdash; DIAGNÓSTICO</div>
-                    <h4>Mapeamento Estratégico</h4>
-                    <p>Funil atual, concorrência e gaps entre verba e receita.</p>
-                </div>
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">02 &mdash; PERFIS</div>
-                    <h4>Segmentação Comportamental</h4>
-                    <p>Perfis orientam criativo, argumento, canal e cadência.</p>
-                </div>
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">03 &mdash; ESTRUTURA</div>
-                    <h4>Arquitetura de Campanhas</h4>
-                    <p>Campanhas por intenção, descoberta, região e etapa do funil.</p>
-                </div>
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">04 &mdash; INTEGRAÇÃO</div>
-                    <h4>Conexão Mídia-CRM-BI</h4>
-                    <p>Mídia, CRM e dashboards lendo o mesmo sinal.</p>
-                </div>
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">05 &mdash; OTIMIZAÇÃO</div>
-                    <h4>Ciclos de Melhoria Contínua</h4>
-                    <p>Ciclos semanais com base em qualidade, agenda e venda.</p>
-                </div>
-                <div class="metodo-card" data-reveal>
-                    <div class="metodo-step-num">06 &mdash; ESCALA</div>
-                    <h4>Escala Operacional</h4>
-                    <p>Escala só depois de sinal validado por operação.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- SECTION: METODO -->
 
-        <!-- VISUAL BREAK: PROFILES -->
+<!-- VISUAL BREAK: PROFILES -->
     <section class="visual-break visual-break-profiles" id="banner-perfis" aria-label="Diversidade de perfis 50+">
         <div class="container">
             <div class="visual-banner" data-reveal>
@@ -3875,40 +3976,45 @@
         </div>
     </section>
 
-    <!-- SECTION: DASHBOARD MOCKUP -->
-    <section class="dashboard-section dashboard-command" id="dashboard">
+<!-- SECTION: STRATEGIC SYSTEM -->
+    <section class="section strategic-system" id="como-pensamos">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Central de operação</span>
-                <h2 class="section-title">Dashboard com cara de uso diário.</h2>
-                <p class="section-subtitle">Filtros, origem do lead, loja, região, perfil e status em uma leitura operacional.</p>
-                <div class="dashboard-note">Estrutura ilustrativa</div>
+                <span class="section-label">Como pensamos</span>
+                <h2 class="section-title">Inteligência antes da mídia</h2>
+                <p class="section-subtitle">Antes de escalar verba, a Media.K define hipótese, sinal e decisão.</p>
             </div>
-            <div class="dashboard-mock real-dashboard" data-reveal id="dashboardMock">
-                <div class="dashboard-chrome"><span class="chrome-dot red"></span><span class="chrome-dot yellow"></span><span class="chrome-dot green"></span><span class="chrome-url">Media.K BI / Audiences / 50+ / lojas</span></div>
-                <div class="dashboard-content command-grid">
-                    <aside class="dashboard-sidebar"><strong>Filtros</strong><span>Região: Brasil</span><span>Perfil: 50+</span><span>Canal: Meta + Google</span><span>Status: agendamento</span></aside>
-                    <div class="dashboard-main">
-                        <div class="dashboard-kpis">
-                            <div class="kpi-card"><div class="kpi-label">Leads qualificados</div><div class="kpi-value">1.847</div><div class="kpi-change">+24% no período</div></div>
-                            <div class="kpi-card"><div class="kpi-label">Lojas com demanda</div><div class="kpi-value">280</div><div class="kpi-change">visão nacional</div></div>
-                            <div class="kpi-card"><div class="kpi-label">Perfis ativos</div><div class="kpi-value">6</div><div class="kpi-change">mensagens por intenção</div></div>
-                        </div>
-                        <div class="dashboard-chart ops-chart"><div class="chart-header"><span class="chart-title">Demanda por etapa do funil</span><span class="chart-period">semana atual</span></div><div class="funnel-bars"><div><span>Busca</span><i style="height:84%"></i></div><div><span>Lead</span><i style="height:68%"></i></div><div><span>CRM</span><i style="height:52%"></i></div><div><span>Agenda</span><i style="height:38%"></i></div><div><span>Loja</span><i style="height:31%"></i></div></div></div>
-                        <div class="dashboard-channels"><div class="channel-bar-item"><span>Google Search</span><div class="channel-bar"><div class="channel-bar-fill" data-width="82%"></div></div><strong>82%</strong></div><div class="channel-bar-item"><span>Meta Ads</span><div class="channel-bar"><div class="channel-bar-fill" data-width="74%"></div></div><strong>74%</strong></div><div class="channel-bar-item"><span>CRM Follow-up</span><div class="channel-bar"><div class="channel-bar-fill" data-width="66%"></div></div><strong>66%</strong></div><div class="channel-bar-item"><span>Regional Sul</span><div class="channel-bar"><div class="channel-bar-fill" data-width="58%"></div></div><strong>58%</strong></div></div>
-                        <div class="dashboard-worktable">
-                            <div><span>Loja</span><span>Perfil dominante</span><span>Próxima ação</span><span>Status</span></div>
-                            <div><strong>SP-042</strong><span>Segurança</span><span>retorno humano</span><em>prioridade</em></div>
-                            <div><strong>RJ-018</strong><span>Afeto</span><span>prova social</span><em>nutrição</em></div>
-                            <div><strong>MG-031</strong><span>Autonomia</span><span>comparativo</span><em>teste</em></div>
-                        </div>
-                    </div>
+            <div class="system-map compact-system-map" data-reveal>
+                <div class="system-node"><div class="node-dot">1</div><h4>Mercado</h4><p>Tamanho, categoria e janela competitiva.</p></div>
+                <div class="system-node"><div class="node-dot">2</div><h4>Perfil</h4><p>Gatilho, objeção e repertório.</p></div>
+                <div class="system-node"><div class="node-dot">3</div><h4>Mensagem</h4><p>Prova, clareza e estágio de confiança.</p></div>
+                <div class="system-node"><div class="node-dot">4</div><h4>Canal</h4><p>Intenção, descoberta e região.</p></div>
+                <div class="system-node"><div class="node-dot">5</div><h4>Sinal</h4><p>Lead, agenda, loja e qualidade.</p></div>
+                <div class="system-node"><div class="node-dot">6</div><h4>Escala</h4><p>Verba realocada pelo que avança.</p></div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECTION: MEDIAK INSIGHTS -->
+    <section class="section insights-section" id="insights">
+        <div class="container">
+            <div class="insights-grid" data-reveal>
+                <div>
+                    <span class="section-label">Insights da Media.K</span>
+                    <h2 class="section-title">O que aprendemos observando o consumidor 50+</h2>
+                    <p class="section-subtitle">A vantagem não está em falar mais alto. Está em reconhecer sinais que a mídia genérica ignora.</p>
+                </div>
+                <div class="insights-board">
+                    <div class="insight-row"><span>01</span><strong>Confiança vem antes da oferta.</strong><em>Sem clareza, o clique não vira conversa.</em></div>
+                    <div class="insight-row"><span>02</span><strong>Canal muda por intenção.</strong><em>Busca, social e CRM cumprem papéis diferentes.</em></div>
+                    <div class="insight-row"><span>03</span><strong>Idade não explica comportamento.</strong><em>Perfil, objeção e momento de vida explicam mais.</em></div>
+                    <div class="insight-row"><span>04</span><strong>Atendimento é parte da mídia.</strong><em>Performance termina onde a operação responde.</em></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: COMPARISON -->
+<!-- SECTION: COMPARISON -->
     <section class="section" id="comparacao">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -3985,88 +4091,7 @@
         </div>
     </section>
 
-    <!-- SECTION: CLIENTS -->
-    <section class="section section-alt" id="clientes">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-label">Quem Confia</span>
-                <h2 class="section-title">Marcas que confiaram na Media.K para crescer</h2>
-                <p class="section-subtitle">Prova real da estrutura por trás da oportunidade: marcas, parceiros e operações que exigem estratégia, performance e dados.</p>
-            </div>
-            <div class="clients-grid" data-reveal>
-                <div class="clients-subsection">
-                    <h3>Marcas atendidas</h3>
-                    <div class="chips">
-                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" loading="lazy">AudioNova Brasil</div>
-                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy">Sonova</div>
-                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy">Clarins</div>
-                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy">André Veículos</div>
-                        <div class="chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/072c1e57dc588bd7aefa2a8364df4e0f57f6756f.473cbe0ff72cd59f.png" alt="ED" loading="lazy">ED</div>
-                    </div>
-                </div>
-                <div class="clients-subsection">
-                    <h3>Parceiros certificados</h3>
-                    <div class="chips">
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google Partner" loading="lazy">Google Partner</div>
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta Business Partner" loading="lazy">Meta Business</div>
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok Ads" loading="lazy">TikTok Ads</div>
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" loading="lazy">Taboola</div>
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/mlabs.65c30cb4c5c17724.png" alt="Mlabs" loading="lazy">Mlabs</div>
-                        <div class="chip partner-chip logo-chip"><img src="https://www.mediak.com.br/_next/static/media/uappi.de381e1be05f91f6.png" alt="Uappi" loading="lazy">Uappi</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- VISUAL BREAK: OPERATION -->
-    <section class="visual-break visual-break-operation" id="banner-operacao" aria-label="Estratégia conectada à operação">
-        <div class="container">
-            <div class="visual-banner" data-reveal>
-                <img src="./banner-operacao.png" alt="Equipe analisando dashboards e dados em sala de controle estratégica" loading="lazy">
-                <div class="visual-banner-content">
-                    <span>Da estratégia à escala</span>
-                    <h2>Da leitura comportamental à operação nacional.</h2>
-                    <p>Quando mídia, dados e atendimento se conectam, oportunidade vira sistema.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- SECTION: CASES -->
-    <section class="section cases-theater" id="cases">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-label">Prova de escala</span>
-                <h2 class="section-title">AudioNova não é um case. É uma operação nacional.</h2>
-                <p class="section-subtitle">280 lojas, múltiplos canais, sinais regionais e atendimento conectados em uma só leitura.</p>
-            </div>
-            <div class="audionova-operation" data-reveal>
-                <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde auditiva | público 60+ | presença nacional</span></div></div>
-                <div class="operation-scale-ribbon"><span>Meta</span><i></i><span>Google</span><i></i><span>CRM</span><i></i><span>BI</span><i></i><span>Atendimento</span></div>
-                <div class="operation-map"><div class="store-cloud" aria-hidden="true"><span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span><span style="--i:12"></span><span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span><span style="--i:16"></span><span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span><span style="--i:20"></span><span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span><span style="--i:24"></span><span style="--i:25"></span><span style="--i:26"></span><span style="--i:27"></span></div>
-                    <div class="operation-core"><strong>280</strong><span>lojas conectadas</span><small>operação nacional</small></div>
-                    <div class="operation-link link-1"><b>Meta</b><span>descoberta</span></div>
-                    <div class="operation-link link-2"><b>Google</b><span>intenção</span></div>
-                    <div class="operation-link link-3"><b>CRM</b><span>follow-up</span></div>
-                    <div class="operation-link link-4"><b>BI</b><span>decisão</span></div>
-                    <div class="operation-link link-5"><b>Loja</b><span>atendimento</span></div>
-                </div>
-                <div class="operation-notes">
-                    <div><span>Desafio</span><p>Distribuir interesse 60+ por região, canal e unidade.</p></div>
-                    <div><span>Complexidade</span><p>Perfil, origem, loja e qualidade lidos no mesmo painel.</p></div>
-                    <div><span>Escala</span><p>Decisão de verba, pausa e follow-up guiada por sinal real.</p></div>
-                </div>
-            </div>
-            <div class="case-mini-strip" data-reveal>
-                <article><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy"><strong>Clarins</strong><span>demanda premium por perfil</span></article>
-                <article><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy"><strong>Sonova</strong><span>dados e tecnologia em áudio</span></article>
-                <article><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy"><strong>André Veículos</strong><span>performance e presença regional</span></article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: CHANNELS -->
+<!-- SECTION: CHANNELS -->
     <section class="section section-alt system-execution" id="canais">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -4095,7 +4120,7 @@
         </div>
     </section>
 
-    <!-- SECTION: DIFFERENTIALS -->
+<!-- SECTION: DIFFERENTIALS -->
     <section class="section proof-strip-section" id="diferenciais">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -4112,7 +4137,7 @@
         </div>
     </section>
 
-    <!-- SECTION: LEADERSHIP -->
+<!-- SECTION: LEADERSHIP -->
     <section class="section section-alt" id="equipe">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -4143,7 +4168,68 @@
         </div>
     </section>
 
-    <!-- SECTION: URGENCY -->
+<!-- SECTION: PODCAST 60+ -->
+    <section class="section podcast-section" id="podcast60">
+        <div class="container">
+            <div class="podcast-feature" data-reveal>
+                <div class="podcast-media">
+                    <img src="https://www.mediak.com.br/_next/static/media/podcast60.1e167c40f2be23d5.webp" alt="Podcast 60+ da Media.K" loading="lazy">
+                </div>
+                <div class="podcast-copy">
+                    <span class="section-label">Podcast 60+</span>
+                    <h2 class="section-title">A Media.K também ajuda a construir a conversa sobre a Silver Economy.</h2>
+                    <p class="section-subtitle">Com convidados, especialistas e temas sobre consumo, comportamento e longevidade, o Podcast 60+ reforça uma visão proprietária do público maduro.</p>
+                    <div class="podcast-signals" aria-label="Temas do Podcast 60+">
+                        <span>comportamento</span><span>consumo</span><span>longevidade</span><span>tendências</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="metodo">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-label" style="color: var(--cyan);">Resposta estratégica</span>
+                <h2 class="section-title text-white">Método Estrela do Norte: da leitura ao ganho operacional</h2>
+                <p class="section-subtitle" style="color: #94a3b8;">Um sistema em 6 movimentos: entender, segmentar, estruturar, integrar, otimizar e escalar.</p>
+            </div>
+            <div class="metodo-grid">
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">01 &mdash; DIAGNÓSTICO</div>
+                    <h4>Mapeamento Estratégico</h4>
+                    <p>Funil atual, concorrência e gaps entre verba e receita.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">02 &mdash; PERFIS</div>
+                    <h4>Segmentação Comportamental</h4>
+                    <p>Perfis orientam criativo, argumento, canal e cadência.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">03 &mdash; ESTRUTURA</div>
+                    <h4>Arquitetura de Campanhas</h4>
+                    <p>Campanhas por intenção, descoberta, região e etapa do funil.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">04 &mdash; INTEGRAÇÃO</div>
+                    <h4>Conexão Mídia-CRM-BI</h4>
+                    <p>Mídia, CRM e dashboards lendo o mesmo sinal.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">05 &mdash; OTIMIZAÇÃO</div>
+                    <h4>Ciclos de Melhoria Contínua</h4>
+                    <p>Ciclos semanais com base em qualidade, agenda e venda.</p>
+                </div>
+                <div class="metodo-card" data-reveal>
+                    <div class="metodo-step-num">06 &mdash; ESCALA</div>
+                    <h4>Escala Operacional</h4>
+                    <p>Escala só depois de sinal validado por operação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECTION: URGENCY -->
     <section class="section" id="urgencia">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -4170,7 +4256,7 @@
         </div>
     </section>
 
-        <!-- VISUAL BREAK: DIAGNOSIS -->
+<!-- VISUAL BREAK: DIAGNOSIS -->
     <section class="visual-break visual-break-diagnosis" id="banner-diagnostico" aria-label="Decisão estratégica final">
         <div class="container">
             <div class="visual-banner" data-reveal>
@@ -4193,7 +4279,7 @@
         </div>
     </section>
 
-    <!-- SECTION: MAIN FORM -->
+<!-- SECTION: MAIN FORM -->
     <section class="section contact-cta" id="contato">
         <div class="container">
             <div class="contact-cta-box" data-reveal>
@@ -4205,7 +4291,7 @@
         </div>
     </section>
 
-    <!-- SECTION: FAQ -->
+<!-- SECTION: FAQ -->
     <section class="section section-alt" id="faq">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -4295,7 +4381,7 @@
         </div>
     </section>
 
-    <!-- SECTION: FOOTER -->
+<!-- SECTION: FOOTER -->
     <footer class="footer" id="rodape">
         <div class="container">
             <div class="footer-grid">
@@ -4348,7 +4434,7 @@
         </div>
     </footer>
 
-    <!-- FLOATING CTA (MOBILE) -->
+<!-- FLOATING CTA (MOBILE) -->
     <div class="floating-cta" id="floatingCta">
         <a href="#topo" class="btn btn-primary" aria-label="Solicitar diagnóstico">Solicitar Diagnóstico &rarr;</a>
     </div>

@@ -2855,6 +2855,55 @@
         @media (max-width:640px) { .silver-node{width:112px;} .silver-core strong{font-size:3rem;} .silver-orbit{width:100%;} .operation-core{width:150px;height:150px;} .operation-core strong{font-size:3.2rem;} .operation-link{width:118px;padding:12px;} .audionova-operation,.profile-lab-shell,.contact-cta-box{padding:22px;} }
 
         /* ============================================
+           TEXT CUT + SYSTEM REFINEMENT
+           ============================================ */
+        .hero::before { opacity: .9; filter: saturate(1.15); }
+        .hero h1 { font-size: clamp(2.8rem, 5.2vw, 4.55rem); }
+        .hero-sub { font-size: 1rem; max-width: 610px; }
+        .hero-market-signal { background: linear-gradient(90deg, rgba(2,211,241,.16), rgba(255,255,255,.84)); }
+        .hero-intel-panel { background: rgba(255,255,255,.82); }
+        .intel-panel-cell { background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(241,248,255,.88)); }
+
+        .compact-system-map .system-node { padding: 20px; }
+        .compact-system-map .system-node p { font-size: .78rem; line-height: 1.45; }
+        .metodo-card p { font-size: .8rem; line-height: 1.5; }
+
+        .system-execution { background: linear-gradient(180deg, #f8faff 0%, #eef6ff 100%); }
+        .execution-system { display:grid; grid-template-columns:repeat(5,1fr); gap:0; align-items:stretch; border:1px solid rgba(15,23,42,.08); border-radius:26px; background:#fff; box-shadow:0 26px 80px rgba(15,23,42,.07); overflow:hidden; }
+        .execution-step { min-height:190px; padding:24px 20px; display:flex; flex-direction:column; justify-content:center; position:relative; }
+        .execution-step + .execution-connector + .execution-step { border-left:1px solid rgba(15,23,42,.06); }
+        .execution-step span { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(5,116,221,.08); color:var(--blue); font-weight:800; font-size:.76rem; margin-bottom:16px; }
+        .execution-step strong { color:#0f172a; font-size:1.05rem; margin-bottom:8px; }
+        .execution-step p { color:#64748b; font-size:.82rem; line-height:1.45; }
+        .execution-connector { display:none; }
+        .execution-step::after { content:''; position:absolute; right:-10px; top:50%; width:20px; height:20px; border-top:1px solid rgba(5,116,221,.28); border-right:1px solid rgba(5,116,221,.28); transform:translateY(-50%) rotate(45deg); background:#fff; z-index:2; }
+        .execution-step:last-of-type::after { display:none; }
+        .media span{background:rgba(5,116,221,.09)} .tracking span{background:rgba(2,211,241,.12);color:#0284a8} .crm span{background:rgba(253,59,102,.1);color:#be123c} .bi span{background:rgba(124,58,237,.1);color:#6d28d9} .optimize span{background:rgba(16,185,129,.1);color:#059669}
+        .execution-logos { margin-top:18px; display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap; color:#64748b; font-size:.82rem; }
+        .execution-logos img { max-width:84px; max-height:28px; object-fit:contain; filter:saturate(.95); }
+        .execution-logos span { flex-basis:100%; text-align:center; }
+
+        .proof-strip-section { background:#fff; }
+        .proof-strip { display:grid; grid-template-columns:repeat(5,1fr); border:1px solid rgba(15,23,42,.08); border-radius:24px; overflow:hidden; background:#fff; box-shadow:0 22px 64px rgba(15,23,42,.06); }
+        .proof-strip div { min-height:128px; padding:22px; border-right:1px solid rgba(15,23,42,.07); display:flex; flex-direction:column; justify-content:center; }
+        .proof-strip div:last-child { border-right:0; }
+        .proof-strip strong { color:#0f172a; font-size:1rem; margin-bottom:8px; }
+        .proof-strip span { color:#64748b; font-size:.78rem; line-height:1.45; }
+
+        .store-cloud { position:absolute; inset:0; pointer-events:none; opacity:.55; }
+        .store-cloud span { position:absolute; width:5px; height:5px; border-radius:50%; background:rgba(2,211,241,.8); box-shadow:0 0 14px rgba(2,211,241,.7); left:calc(10% + (var(--i) * 29px) % 78%); top:calc(12% + (var(--i) * 47px) % 72%); animation: storePulse 3.6s ease-in-out infinite; animation-delay:calc(var(--i) * .08s); }
+        @keyframes storePulse { 0%,100%{transform:scale(.8);opacity:.35;} 50%{transform:scale(1.7);opacity:1;} }
+        .operation-map { box-shadow: inset 0 0 90px rgba(2,211,241,.08); }
+        .operation-core { z-index:4; }
+        .operation-link { z-index:5; }
+        .dashboard-note { opacity:.72; }
+        .real-dashboard { border-radius:8px; background:#101827; }
+        .kpi-card { border:1px solid rgba(255,255,255,.07); }
+
+        @media (max-width:1023px) { .execution-system,.proof-strip{grid-template-columns:1fr;} .execution-step{min-height:auto;} .execution-step::after{display:none;} .proof-strip div{border-right:0;border-bottom:1px solid rgba(15,23,42,.07);} .proof-strip div:last-child{border-bottom:0;} }
+
+
+        /* ============================================
            FINAL PREMIUM REFINEMENT
            ============================================ */
         .hero-market-signal {
@@ -3257,8 +3306,8 @@
         <div class="container">
             <div class="hero-copy">
                 <div class="hero-badge">Inteligência proprietária para o mercado 50+</div>
-                <h1>Transformamos a oportunidade do mercado 50+ em <span class="highlight">crescimento mensurável</span>.</h1>
-                <p class="hero-sub">Enquanto a maioria das marcas disputa os mesmos consumidores, o público 50+ movimenta mais de R$ 2 trilhões e continua subatendido. A Media.K conecta estratégia, mídia, CRM e BI para capturar essa demanda do clique ao atendimento.</p>
+                <h1>O mercado 50+ já se move. <span class="highlight">A Media.K mostra onde capturar.</span></h1>
+                <p class="hero-sub">Enquanto marcas disputam os mesmos públicos, a Silver Economy movimenta R$ 2 trilhões com baixa leitura estratégica. A Media.K conecta comportamento, canal e operação para transformar oportunidade em receita.</p>
                 <div class="hero-ctas">
                     <a href="#diagnostico" class="btn btn-primary" aria-label="Solicitar diagnóstico gratuito">Solicitar Diagnóstico</a>
                     <a href="#silver-economy" class="btn btn-outline" aria-label="Ver oportunidade 50+">Ver a Oportunidade</a>
@@ -3269,7 +3318,7 @@
                     <i></i>
                 </div>
                 <div class="hero-intel-panel" data-reveal>
-                    <div class="intel-panel-label"><span>Modelo operacional Media.K</span><span>Mercado 50+ / CRM / BI</span></div>
+                    <div class="intel-panel-label"><span>Modelo operacional Media.K</span><span>Perfil / canal / loja / atendimento</span></div>
                     <div class="intel-panel-grid">
                         <div class="intel-panel-cell"><strong>50+</strong><span>perfis e sinais comportamentais</span></div>
                         <div class="intel-panel-cell"><strong>CRM</strong><span>leads conectados ao atendimento</span></div>
@@ -3278,10 +3327,10 @@
                     </div>
                 </div>
                 <div class="hero-proof" data-reveal>
-                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="100" data-prefix="+">+0</div><div class="hero-proof-label">marcas atendidas</div></div>
-                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="15" data-prefix="+">+0</div><div class="hero-proof-label">anos de mercado</div></div>
-                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="280">0</div><div class="hero-proof-label">lojas gerenciadas</div></div>
-                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="6">0</div><div class="hero-proof-label">perfis mapeados</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="100" data-prefix="+">+100</div><div class="hero-proof-label">marcas atendidas</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="15" data-prefix="+">+15</div><div class="hero-proof-label">anos de mercado</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="280">280</div><div class="hero-proof-label">lojas gerenciadas</div></div>
+                    <div class="hero-proof-item"><div class="hero-proof-number" data-counter="6">6</div><div class="hero-proof-label">perfis mapeados</div></div>
                 </div>
             </div>
             <div class="hero-form-card" data-reveal>
@@ -3442,15 +3491,15 @@
             <div class="section-header" data-reveal>
                 <span class="section-label">Como pensamos</span>
                 <h2 class="section-title">Inteligência antes da mídia</h2>
-                <p class="section-subtitle">A Media.K transforma leitura de mercado em hipóteses testáveis, aprendizado operacional e escala com rastreabilidade.</p>
+                <p class="section-subtitle">Antes de escalar verba, a Media.K define hipótese, sinal e decisão.</p>
             </div>
-            <div class="system-map" data-reveal>
-                <div class="system-node"><div class="node-dot">1</div><h4>Mercado</h4><p>Mapeamos tamanho da oportunidade, categoria e maturidade da demanda 50+.</p></div>
-                <div class="system-node"><div class="node-dot">2</div><h4>Perfil</h4><p>Identificamos comportamento, objeções, gatilhos e repertório de decisão.</p></div>
-                <div class="system-node"><div class="node-dot">3</div><h4>Mensagem</h4><p>Desenhamos criativos e argumentos por estágio de confiança.</p></div>
-                <div class="system-node"><div class="node-dot">4</div><h4>Canal</h4><p>Distribuímos mídia por intenção, descoberta e contexto regional.</p></div>
-                <div class="system-node"><div class="node-dot">5</div><h4>Tracking</h4><p>Conectamos clique, lead, atendimento, CRM e BI.</p></div>
-                <div class="system-node"><div class="node-dot">6</div><h4>Escala</h4><p>Realocamos verba para o que vira conversa, agenda e receita.</p></div>
+            <div class="system-map compact-system-map" data-reveal>
+                <div class="system-node"><div class="node-dot">1</div><h4>Mercado</h4><p>Tamanho, categoria e janela competitiva.</p></div>
+                <div class="system-node"><div class="node-dot">2</div><h4>Perfil</h4><p>Gatilho, objeção e repertório.</p></div>
+                <div class="system-node"><div class="node-dot">3</div><h4>Mensagem</h4><p>Prova, clareza e estágio de confiança.</p></div>
+                <div class="system-node"><div class="node-dot">4</div><h4>Canal</h4><p>Intenção, descoberta e região.</p></div>
+                <div class="system-node"><div class="node-dot">5</div><h4>Sinal</h4><p>Lead, agenda, loja e qualidade.</p></div>
+                <div class="system-node"><div class="node-dot">6</div><h4>Escala</h4><p>Verba realocada pelo que avança.</p></div>
             </div>
         </div>
     </section>
@@ -3479,39 +3528,39 @@
         <div class="container">
             <div class="section-header" data-reveal>
                 <span class="section-label" style="color: var(--cyan);">Resposta estratégica</span>
-                <h2 class="section-title text-white">Método Estrela do Norte: o sistema para capturar o mercado 50+</h2>
-                <p class="section-subtitle" style="color: #94a3b8;">A oportunidade existe, mas não se captura com campanha genérica. O método conecta leitura de mercado, perfis comportamentais, mídia, CRM e BI para transformar demanda 50+ em crescimento rastreável.</p>
+                <h2 class="section-title text-white">Método Estrela do Norte: da leitura ao ganho operacional</h2>
+                <p class="section-subtitle" style="color: #94a3b8;">Um sistema em 6 movimentos: entender, segmentar, estruturar, integrar, otimizar e escalar.</p>
             </div>
             <div class="metodo-grid">
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">01 &mdash; DIAGNÓSTICO</div>
                     <h4>Mapeamento Estratégico</h4>
-                    <p>Auditoria completa do funil atual, análise competitiva no mercado 50+ e identificação de gaps entre investimento e receita.</p>
+                    <p>Funil atual, concorrência e gaps entre verba e receita.</p>
                 </div>
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">02 &mdash; PERFIS</div>
                     <h4>Segmentação Comportamental</h4>
-                    <p>Aplicação dos 6 perfis comportamentais do consumidor 50+: do perfil Afeto ao Integração, cada segmento recebe criativos e mensagens específicas.</p>
+                    <p>Perfis orientam criativo, argumento, canal e cadência.</p>
                 </div>
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">03 &mdash; ESTRUTURA</div>
                     <h4>Arquitetura de Campanhas</h4>
-                    <p>Estrutura multicanal com rastreamento end-to-end. Do primeiro clique ao atendimento presencial, cada ponto de contato é mapeado.</p>
+                    <p>Campanhas por intenção, descoberta, região e etapa do funil.</p>
                 </div>
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">04 &mdash; INTEGRAÇÃO</div>
                     <h4>Conexão Mídia-CRM-BI</h4>
-                    <p>Integração nativa entre plataformas de mídia, CRM e business intelligence. Comparamos performance por canal, loja e perfil em tempo real.</p>
+                    <p>Mídia, CRM e dashboards lendo o mesmo sinal.</p>
                 </div>
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">05 &mdash; OTIMIZAÇÃO</div>
                     <h4>Ciclos de Melhoria Contínua</h4>
-                    <p>Otimização semanal baseada em dados reais de conversão, não apenas métricas de vaidade. Realocamos investimento para onde gera receita.</p>
+                    <p>Ciclos semanais com base em qualidade, agenda e venda.</p>
                 </div>
                 <div class="metodo-card" data-reveal>
                     <div class="metodo-step-num">06 &mdash; ESCALA</div>
-                    <h4>Crescimento Previsível</h4>
-                    <p>Com o funil validado, escalamos investimento com previsibilidade. Cada real adicional tem retorno mensurável e rastreável.</p>
+                    <h4>Escala Operacional</h4>
+                    <p>Escala só depois de sinal validado por operação.</p>
                 </div>
             </div>
         </div>
@@ -3553,9 +3602,9 @@
         <div class="container">
             <div class="section-header" data-reveal>
                 <span class="section-label">Central de operação</span>
-                <h2 class="section-title">Menos mockup. Mais sala de controle.</h2>
-                <p class="section-subtitle">A operação conecta mídia, CRM e BI para enxergar demanda por perfil, loja, canal e etapa de atendimento.</p>
-                <div class="dashboard-note">Exemplo ilustrativo da lógica operacional Media.K</div>
+                <h2 class="section-title">Dashboard com cara de uso diário.</h2>
+                <p class="section-subtitle">Filtros, origem do lead, loja, região, perfil e status em uma leitura operacional.</p>
+                <div class="dashboard-note">Estrutura ilustrativa</div>
             </div>
             <div class="dashboard-mock real-dashboard" data-reveal id="dashboardMock">
                 <div class="dashboard-chrome"><span class="chrome-dot red"></span><span class="chrome-dot yellow"></span><span class="chrome-dot green"></span><span class="chrome-url">Media.K BI / Audiences / 50+ / lojas</span></div>
@@ -3698,12 +3747,12 @@
             <div class="section-header" data-reveal>
                 <span class="section-label">Prova de escala</span>
                 <h2 class="section-title">AudioNova não é um case. É uma operação nacional.</h2>
-                <p class="section-subtitle">Mídia, CRM, BI e atendimento precisam conversar quando a demanda sai do anúncio e chega à loja.</p>
+                <p class="section-subtitle">280 lojas, múltiplos canais, sinais regionais e atendimento conectados em uma só leitura.</p>
             </div>
             <div class="audionova-operation" data-reveal>
                 <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde auditiva | público 60+ | presença nacional</span></div></div>
                 <div class="operation-scale-ribbon"><span>Meta</span><i></i><span>Google</span><i></i><span>CRM</span><i></i><span>BI</span><i></i><span>Atendimento</span></div>
-                <div class="operation-map">
+                <div class="operation-map"><div class="store-cloud" aria-hidden="true"><span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span><span style="--i:12"></span><span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span><span style="--i:16"></span><span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span><span style="--i:20"></span><span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span><span style="--i:24"></span><span style="--i:25"></span><span style="--i:26"></span><span style="--i:27"></span></div>
                     <div class="operation-core"><strong>280</strong><span>lojas conectadas</span><small>operação nacional</small></div>
                     <div class="operation-link link-1"><b>Meta</b><span>descoberta</span></div>
                     <div class="operation-link link-2"><b>Google</b><span>intenção</span></div>
@@ -3712,9 +3761,9 @@
                     <div class="operation-link link-5"><b>Loja</b><span>atendimento</span></div>
                 </div>
                 <div class="operation-notes">
-                    <div><span>Desafio</span><p>Distribuir demanda 60+ em múltiplas regiões sem perder rastreabilidade entre mídia, atendimento e loja.</p></div>
-                    <div><span>Complexidade</span><p>Regional, canal, perfil comportamental, CRM e qualidade do lead precisam ser lidos juntos.</p></div>
-                    <div><span>Escala</span><p>Dashboards orientam onde investir, pausar, reforçar contato e ajustar mensagem.</p></div>
+                    <div><span>Desafio</span><p>Distribuir interesse 60+ por região, canal e unidade.</p></div>
+                    <div><span>Complexidade</span><p>Perfil, origem, loja e qualidade lidos no mesmo painel.</p></div>
+                    <div><span>Escala</span><p>Decisão de verba, pausa e follow-up guiada por sinal real.</p></div>
                 </div>
             </div>
             <div class="case-mini-strip" data-reveal>
@@ -3726,105 +3775,47 @@
     </section>
 
     <!-- SECTION: CHANNELS -->
-    <section class="section section-alt" id="canais">
+    <section class="section section-alt system-execution" id="canais">
         <div class="container">
             <div class="section-header" data-reveal>
                 <span class="section-label">Execução</span>
-                <h2 class="section-title">O que entregamos na prática</h2>
-                <p class="section-subtitle">Canais, ferramentas e processos que operam em sincronia para gerar receita previsível.</p>
+                <h2 class="section-title">Não é uma lista de canais. É um sistema conectado.</h2>
+                <p class="section-subtitle">Cada ferramenta tem uma função: atrair, identificar, nutrir, medir e realocar investimento.</p>
             </div>
-            <div class="channels-grid">
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon"><img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google Ads" class="channel-logo" loading="lazy"></div>
-                    <h4>Google Ads</h4>
-                    <p>Search, Display, YouTube e Performance Max com segmentação específica para o comportamento de busca do 50+.</p>
-                </div>
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon"><img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta Ads" class="channel-logo" loading="lazy"></div>
-                    <h4>Meta Ads</h4>
-                    <p>Facebook e Instagram com criativos baseados nos 6 perfis comportamentais. Conversions API implementada para rastreamento preciso.</p>
-                </div>
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon multi-logo"><img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok Ads" class="channel-logo" loading="lazy"><img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" class="channel-logo" loading="lazy"></div>
-                    <h4>TikTok + Taboola</h4>
-                    <p>Alcance em plataformas de descoberta com conteúdo nativo. O 50+ está no TikTok e consome conteúdo em portais de notícias.</p>
-                </div>
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                    </div>
-                    <h4>Tracking + CRM</h4>
-                    <p>Rastreamento end-to-end com integração de CRM. Cada lead é acompanhado do primeiro clique ao fechamento.</p>
-                </div>
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-                    </div>
-                    <h4>BI + Dashboards</h4>
-                    <p>Painéis em tempo real com visão por canal, loja, regional e perfil. Você enxerga onde o investimento vira venda.</p>
-                </div>
-                <div class="card channel-card" data-reveal>
-                    <div class="channel-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                    </div>
-                    <h4>Otimização Contínua</h4>
-                    <p>Ciclos semanais de otimização. Realocamos investimento para onde gera resultado, com base em dados de conversão real.</p>
-                </div>
+            <div class="execution-system" data-reveal>
+                <div class="execution-step media"><span>01</span><strong>Mídia</strong><p>Google, Meta, TikTok e descoberta.</p></div>
+                <div class="execution-connector"></div>
+                <div class="execution-step tracking"><span>02</span><strong>Tracking</strong><p>Origem, perfil, loja e evento.</p></div>
+                <div class="execution-connector"></div>
+                <div class="execution-step crm"><span>03</span><strong>CRM</strong><p>Contato, retorno e qualificação.</p></div>
+                <div class="execution-connector"></div>
+                <div class="execution-step bi"><span>04</span><strong>BI</strong><p>Leitura por canal, região e etapa.</p></div>
+                <div class="execution-connector"></div>
+                <div class="execution-step optimize"><span>05</span><strong>Otimização</strong><p>Verba segue o sinal certo.</p></div>
+            </div>
+            <div class="execution-logos" data-reveal>
+                <img src="https://www.mediak.com.br/_next/static/media/google.c54ea120417b1069.png" alt="Google" loading="lazy">
+                <img src="https://www.mediak.com.br/_next/static/media/meta.ec49cf2fe7529bb5.png" alt="Meta" loading="lazy">
+                <img src="https://www.mediak.com.br/_next/static/media/tiktok.621add404dbdc27e.png" alt="TikTok" loading="lazy">
+                <img src="https://www.mediak.com.br/_next/static/media/taboola.c8a4c98934470f39.webp" alt="Taboola" loading="lazy">
+                <span>plataformas a serviço do sistema, não o contrário</span>
             </div>
         </div>
     </section>
 
     <!-- SECTION: DIFFERENTIALS -->
-    <section class="section" id="diferenciais">
+    <section class="section proof-strip-section" id="diferenciais">
         <div class="container">
             <div class="section-header" data-reveal>
                 <span class="section-label">Por que a Media.K</span>
-                <h2 class="section-title">O que nos separa do resto</h2>
-                <p class="section-subtitle">Diferenciais construídos ao longo de 15 anos e +100 operações no mercado 50+.</p>
+                <h2 class="section-title">O diferencial é operar o 50+ como inteligência, não como idade.</h2>
             </div>
-            <div class="diff-grid">
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(5,116,221,0.06); color: var(--blue);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <h4>Método Estrela do Norte</h4>
-                    <p>Framework proprietário com 6 etapas validadas em +100 marcas. Não é processo genérico, é inteligência aplicada ao 50+.</p>
-                </div>
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(2,211,241,0.06); color: var(--cyan);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                    </div>
-                    <h4>6 Perfis Comportamentais</h4>
-                    <p>Segmentação exclusiva do consumidor 50+: Afeto, Integração, Motivação, Autonomia, Segurança e Legado.</p>
-                </div>
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(253,59,102,0.06); color: var(--pink);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-                    </div>
-                    <h4>280 Lojas em Paralelo</h4>
-                    <p>Experiência comprovada gerenciando mídia em escala para centenas de pontos de venda simultaneamente.</p>
-                </div>
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(255,212,0,0.08); color: #d97706;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                    </div>
-                    <h4>Rastreamento Clique-Venda</h4>
-                    <p>Integração completa entre mídia, CRM e BI. Enxergamos exatamente onde cada real de investimento gera receita.</p>
-                </div>
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(16,185,129,0.06); color: #10b981;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h4>Parceiro Google e Meta</h4>
-                    <p>Certificações oficiais que garantem acesso a betas, suporte prioritário e melhores práticas direto das plataformas.</p>
-                </div>
-                <div class="card diff-card" data-reveal>
-                    <div class="diff-icon" style="background: rgba(124,58,237,0.06); color: #7c3aed;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <h4>15+ Anos de Foco Exclusivo</h4>
-                    <p>Não somos generalistas que atendem o 50+ eventualmente. É nosso único foco há mais de uma década e meia.</p>
-                </div>
+            <div class="proof-strip" data-reveal>
+                <div><strong>Estrela do Norte</strong><span>método proprietário em 6 movimentos</span></div>
+                <div><strong>6 perfis</strong><span>comportamento aplicado à mídia</span></div>
+                <div><strong>280 lojas</strong><span>escala operacional comprovada</span></div>
+                <div><strong>15+ anos</strong><span>foco real em Silver Economy</span></div>
+                <div><strong>Partners</strong><span>Google, Meta e ecossistema de mídia</span></div>
             </div>
         </div>
     </section>
@@ -4199,7 +4190,9 @@
                     if (!start) start = timestamp;
                     var progress = Math.min((timestamp - start) / duration, 1);
                     var easedProgress = easeOutQuart(progress);
-                    var current = Math.floor(easedProgress * target);
+                    var floorValue = Math.max(1, Math.floor(target * 0.86));
+                    var current = Math.max(floorValue, Math.floor(easedProgress * target));
+                    if (progress === 1) current = target;
                     element.textContent = prefix + current.toLocaleString('pt-BR') + suffix;
                     if (progress < 1) {
                         requestAnimationFrame(step);

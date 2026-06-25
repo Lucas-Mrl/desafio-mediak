@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.mediak.com.br)"
+      "WebFetch(domain:www.mediak.com.br)",
+      "Bash(where python:*)",
+      "Bash(where node:*)",
+      "Bash(python -)"
     ]
   }
 }

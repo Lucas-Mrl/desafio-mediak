@@ -2855,6 +2855,91 @@
         @media (max-width:640px) { .silver-node{width:112px;} .silver-core strong{font-size:3rem;} .silver-orbit{width:100%;} .operation-core{width:150px;height:150px;} .operation-core strong{font-size:3.2rem;} .operation-link{width:118px;padding:12px;} .audionova-operation,.profile-lab-shell,.contact-cta-box{padding:22px;} }
 
         /* ============================================
+           PODCAST 60+ AUTHORITY
+           ============================================ */
+        .podcast-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+
+        .podcast-feature {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            gap: 44px;
+            align-items: center;
+            padding: 28px;
+            border-radius: 30px;
+            background: #fff;
+            border: 1px solid rgba(15,23,42,0.08);
+            box-shadow: 0 28px 90px rgba(15,23,42,0.08);
+            overflow: hidden;
+        }
+
+        .podcast-media {
+            position: relative;
+            min-height: 320px;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #07111f;
+        }
+
+        .podcast-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(7,17,31,0.36));
+        }
+
+        .podcast-media img {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 700ms ease;
+        }
+
+        .podcast-feature:hover .podcast-media img {
+            transform: scale(1.035);
+        }
+
+        .podcast-copy .section-title {
+            max-width: 680px;
+            margin-bottom: 16px;
+        }
+
+        .podcast-copy .section-subtitle {
+            margin-bottom: 24px;
+            max-width: 640px;
+        }
+
+        .podcast-signals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .podcast-signals span {
+            padding: 9px 12px;
+            border-radius: 999px;
+            background: rgba(5,116,221,0.08);
+            color: #0f3f70;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 900px) {
+            .podcast-feature {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+
+
+        /* ============================================
            CINEMATIC VISUAL BREAKS
            ============================================ */
         .visual-break {
@@ -3639,7 +3724,7 @@
                 <div class="card mistake-card" data-reveal><div class="mistake-kicker">06</div><h4>Otimizam para plataforma, não para negócio</h4><p>Google, Meta e TikTok são meios. A pergunta central é: qual investimento abre acesso real ao mercado 50+?</p></div>
             </div>
             <div class="strategic-bridge" data-reveal>
-                <div><h3>E aqui entra o Método Estrela do Norte</h3><p>A Media.K criou um sistema para sair da leitura genérica de campanha e transformar oportunidade, comportamento e dados em captação mensurável.</p></div>
+                <div><h3>E aqui entra o Método Estrela do Norte</h3><p>A Media.K criou um sistema para transformar oportunidade, comportamento e dados em captação qualificada.</p></div>
                 <div class="bridge-flow" aria-label="Fluxo estratégico"><div class="bridge-step">Oportunidade</div><div class="bridge-step">Erro do mercado</div><div class="bridge-step">Método Media.K</div></div>
             </div>
         </div>
@@ -3684,6 +3769,25 @@
             </div>
         </div>
     </section>
+<!-- SECTION: PODCAST 60+ -->
+    <section class="section podcast-section" id="podcast60">
+        <div class="container">
+            <div class="podcast-feature" data-reveal>
+                <div class="podcast-media">
+                    <img src="https://www.mediak.com.br/_next/static/media/podcast60.1e167c40f2be23d5.webp" alt="Podcast 60+ da Media.K" loading="lazy">
+                </div>
+                <div class="podcast-copy">
+                    <span class="section-label">Podcast 60+</span>
+                    <h2 class="section-title">A Media.K também ajuda a construir a conversa sobre a Silver Economy.</h2>
+                    <p class="section-subtitle">Com convidados, especialistas e temas sobre consumo, comportamento e longevidade, o Podcast 60+ reforça uma visão proprietária do público maduro.</p>
+                    <div class="podcast-signals" aria-label="Temas do Podcast 60+">
+                        <span>comportamento</span><span>consumo</span><span>longevidade</span><span>tendências</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section section-dark" id="metodo">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -3853,7 +3957,7 @@
                     <div class="comparison-list">
                         <div class="comparison-item">
                             <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                            <span>Rastreamento do clique ao atendimento presencial</span>
+                            <span>Leitura da jornada até o atendimento presencial</span>
                         </div>
                         <div class="comparison-item">
                             <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -3861,11 +3965,11 @@
                         </div>
                         <div class="comparison-item">
                             <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                            <span>Integração completa mídia + CRM + BI</span>
+                            <span>Mídia, CRM e BI operando no mesmo painel</span>
                         </div>
                         <div class="comparison-item">
                             <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                            <span>15 anos focados exclusivamente no mercado 50+</span>
+                            <span>15+ anos desenvolvendo estratégias para marcas que dialogam com o público maduro</span>
                         </div>
                         <div class="comparison-item">
                             <span class="icon-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -4002,7 +4106,7 @@
                 <div><strong>Estrela do Norte</strong><span>método proprietário em 6 movimentos</span></div>
                 <div><strong>6 perfis</strong><span>comportamento aplicado à mídia</span></div>
                 <div><strong>280 lojas</strong><span>escala operacional comprovada</span></div>
-                <div><strong>15+ anos</strong><span>foco real em Silver Economy</span></div>
+                <div><strong>15+ anos</strong><span>experiência em marketing, dados e estratégia</span></div>
                 <div><strong>Partners</strong><span>Google, Meta e ecossistema de mídia</span></div>
             </div>
         </div>
@@ -4021,7 +4125,7 @@
                     <img src="./diego.png" alt="Diego Kanaane" class="leader-photo" loading="lazy">
                     <h4>Diego Kanaane</h4>
                     <div class="leader-role">Founder & CEO</div>
-                    <p>15+ anos no mercado 50+. Criou o Método Estrela do Norte e liderou a estratégia de +100 marcas na Silver Economy. Referência em marketing para o público maduro no Brasil.</p>
+                    <p>15+ anos em marketing, dados e estratégia para marcas que dialogam com o público maduro. Criou o Método Estrela do Norte e liderou +100 operações.</p>
                 </div>
                 <div class="card leader-card" data-reveal>
                     <img src="./keith.png" alt="Keith Matsumoto" class="leader-photo" loading="lazy">
@@ -4033,7 +4137,7 @@
                     <img src="./time.png" alt="Equipe Media.K" class="leader-photo" loading="lazy">
                     <h4>Equipe Media.K</h4>
                     <div class="leader-role">Especialistas Multidisciplinares</div>
-                    <p>Time de mídia, dados, CRM e criação focado exclusivamente no mercado 50+. Cada profissional opera com o contexto e a inteligência acumulada em 15 anos de operação.</p>
+                    <p>Time de mídia, dados, CRM e criação com repertório acumulado em operações para marcas que atendem consumidores maduros.</p>
                 </div>
             </div>
         </div>
@@ -4183,7 +4287,7 @@
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Recomendamos um período mínimo de 90 dias para que o método entregue resultados mensuráveis. Após esse período, a continuidade depende dos resultados. Nosso melhor argumento de retenção é a performance, não o contrato.
+                            Recomendamos um período mínimo de 90 dias para que o método entregue resultados conectados à operação. Após esse período, a continuidade depende dos resultados. Nosso melhor argumento de retenção é a performance, não o contrato.
                         </div>
                     </div>
                 </div>
@@ -4200,7 +4304,7 @@
                         <img src="https://www.mediak.com.br/icon.png" alt="Media.K" width="32" height="32" loading="lazy">
                         <span>Media.K</span>
                     </div>
-                    <p>Ajudamos marcas a acessar o mercado 50+ com método próprio, integração completa e resultados mensuráveis.</p>
+                    <p>Ajudamos marcas a acessar o mercado 50+ com método próprio, integração completa e resultados conectados à operação.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/mediak.com.br" target="_blank" rel="noopener" aria-label="Instagram da Media.K">
                             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>

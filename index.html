@@ -2854,6 +2854,65 @@
         @media (max-width:1023px) { .silver-wow-grid,.saturation-compare,.command-grid,.operation-notes,.diagnosis-cta-grid,.case-mini-strip{grid-template-columns:1fr;} .silver-wow-visual{min-height:430px;} .profile-lab-legend{display:none;} .operation-map{min-height:500px;} }
         @media (max-width:640px) { .silver-node{width:112px;} .silver-core strong{font-size:3rem;} .silver-orbit{width:100%;} .operation-core{width:150px;height:150px;} .operation-core strong{font-size:3.2rem;} .operation-link{width:118px;padding:12px;} .audionova-operation,.profile-lab-shell,.contact-cta-box{padding:22px;} }
 
+        /* ============================================
+           FINAL PREMIUM REFINEMENT
+           ============================================ */
+        .hero-market-signal {
+            position: relative;
+            margin: 18px 0 0;
+            padding: 14px 18px 14px 20px;
+            border-left: 3px solid var(--cyan);
+            border-radius: 0 16px 16px 0;
+            background: linear-gradient(90deg, rgba(2,211,241,.12), rgba(255,255,255,.72));
+            box-shadow: 0 14px 40px rgba(15,23,42,.06);
+            max-width: 620px;
+            overflow: hidden;
+        }
+        .hero-market-signal span { display:block; color:#64748b; font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; margin-bottom:4px; }
+        .hero-market-signal strong { display:block; color:#0f172a; font-size:.98rem; line-height:1.35; }
+        .hero-market-signal i { position:absolute; right:16px; top:50%; width:72px; height:1px; background:linear-gradient(90deg, transparent, var(--blue)); animation: signalSweep 2.8s ease-in-out infinite; }
+        @keyframes signalSweep { 0%,100%{transform:translateY(-50%) scaleX(.35); opacity:.35;} 50%{transform:translateY(-50%) scaleX(1); opacity:1;} }
+
+        .insights-section { background:#fff; }
+        .insights-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:56px; align-items:start; }
+        .insights-board { border:1px solid rgba(15,23,42,.08); border-radius:24px; overflow:hidden; background:linear-gradient(180deg,#fff,#f8fbff); box-shadow:0 22px 70px rgba(15,23,42,.07); }
+        .insight-row { display:grid; grid-template-columns:54px 1fr 1fr; gap:18px; align-items:center; padding:22px 24px; border-bottom:1px solid rgba(15,23,42,.07); }
+        .insight-row:last-child { border-bottom:0; }
+        .insight-row span { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(5,116,221,.08); color:var(--blue); font-weight:800; font-size:.78rem; }
+        .insight-row strong { color:#0f172a; line-height:1.35; }
+        .insight-row em { color:#64748b; font-size:.86rem; line-height:1.5; font-style:normal; }
+
+        .profile-compass { min-height:260px; margin-bottom:24px; border-radius:24px; border:1px solid rgba(15,23,42,.08); background:radial-gradient(circle at center, rgba(2,211,241,.16), transparent 32%), linear-gradient(135deg,#fff,#eef8ff); position:relative; overflow:hidden; }
+        .profile-compass::before, .profile-compass::after { content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); border:1px dashed rgba(5,116,221,.22); border-radius:50%; }
+        .profile-compass::before { width:210px; height:210px; }
+        .profile-compass::after { width:118px; height:118px; }
+        .compass-core { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:180px; height:116px; border-radius:24px; background:#07111f; color:#fff; display:grid; place-items:center; align-content:center; text-align:center; padding:18px; box-shadow:0 24px 60px rgba(15,23,42,.18); z-index:2; }
+        .compass-core span { color:var(--cyan); font-weight:800; font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; }
+        .compass-core strong { font-size:.92rem; line-height:1.35; }
+        .compass-axis { position:absolute; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid rgba(15,23,42,.08); color:#0f172a; font-size:.76rem; font-weight:800; box-shadow:0 12px 28px rgba(15,23,42,.07); }
+        .axis-top{left:50%;top:24px;transform:translateX(-50%);} .axis-right{right:28px;top:50%;transform:translateY(-50%);} .axis-bottom{left:50%;bottom:24px;transform:translateX(-50%);} .axis-left{left:28px;top:50%;transform:translateY(-50%);}
+
+        .operation-scale-ribbon { display:flex; align-items:center; gap:10px; margin:22px 0 4px; color:#c8d3e1; font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+        .operation-scale-ribbon i { flex:1; height:1px; background:linear-gradient(90deg, rgba(2,211,241,.3), rgba(255,255,255,.1)); }
+        .operation-core small { display:block; color:#64748b; font-size:.68rem; margin-top:4px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+        .operation-link { transition:transform .24s ease, border-color .24s ease, background .24s ease; }
+        .operation-link:hover { transform:translateY(-3px); border-color:rgba(2,211,241,.38); background:rgba(255,255,255,.13); }
+        .link-5:hover { transform:translateX(-50%) translateY(-3px); }
+
+        .dashboard-worktable { margin-top:16px; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden; background:rgba(255,255,255,.025); }
+        .dashboard-worktable div { display:grid; grid-template-columns:.8fr 1fr 1fr .72fr; gap:12px; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.06); color:#94a3b8; font-size:.76rem; align-items:center; }
+        .dashboard-worktable div:first-child { background:rgba(255,255,255,.05); color:#c8d3e1; font-weight:800; text-transform:uppercase; font-size:.68rem; letter-spacing:.08em; }
+        .dashboard-worktable div:last-child { border-bottom:0; }
+        .dashboard-worktable strong { color:#fff; }
+        .dashboard-worktable em { justify-self:start; padding:4px 8px; border-radius:999px; background:rgba(2,211,241,.12); color:#67e8f9; font-style:normal; font-weight:700; }
+
+        .silver-node, .profile-avatar, .operation-core { animation: premiumFloat 6s ease-in-out infinite; }
+        .node-b, .profile-integracao .profile-avatar { animation-delay:.7s; } .node-c, .profile-motivacao .profile-avatar { animation-delay:1.2s; } .node-d, .profile-legado .profile-avatar { animation-delay:1.8s; }
+        @keyframes premiumFloat { 0%,100%{ translate:0 0; } 50%{ translate:0 -6px; } }
+
+        @media (max-width:1023px) { .insights-grid{grid-template-columns:1fr;} .insight-row{grid-template-columns:44px 1fr;} .insight-row em{grid-column:2;} .profile-compass{min-height:300px;} }
+        @media (max-width:640px) { .hero-market-signal{padding-right:16px;} .hero-market-signal i{display:none;} .operation-scale-ribbon{display:grid; grid-template-columns:auto 1fr auto; font-size:.68rem;} .operation-scale-ribbon span:nth-of-type(n+3), .operation-scale-ribbon i:nth-of-type(n+2){display:none;} .dashboard-worktable div{grid-template-columns:1fr 1fr;} .dashboard-worktable div:first-child{display:none;} }
+
 
         /* ============================================
            HEADER + FIRST FOLD REFINEMENT
@@ -3204,6 +3263,11 @@
                     <a href="#diagnostico" class="btn btn-primary" aria-label="Solicitar diagnóstico gratuito">Solicitar Diagnóstico</a>
                     <a href="#silver-economy" class="btn btn-outline" aria-label="Ver oportunidade 50+">Ver a Oportunidade</a>
                 </div>
+                <div class="hero-market-signal" data-reveal>
+                    <span>Mercado observado</span>
+                    <strong>50+ não é audiência. É sistema de decisão.</strong>
+                    <i></i>
+                </div>
                 <div class="hero-intel-panel" data-reveal>
                     <div class="intel-panel-label"><span>Modelo operacional Media.K</span><span>Mercado 50+ / CRM / BI</span></div>
                     <div class="intel-panel-grid">
@@ -3392,6 +3456,25 @@
     </section>
 
     <!-- SECTION: METODO -->
+
+    <!-- SECTION: MEDIAK INSIGHTS -->
+    <section class="section insights-section" id="insights">
+        <div class="container">
+            <div class="insights-grid" data-reveal>
+                <div>
+                    <span class="section-label">Insights da Media.K</span>
+                    <h2 class="section-title">O que aprendemos observando o consumidor 50+</h2>
+                    <p class="section-subtitle">A vantagem não está em falar mais alto. Está em reconhecer sinais que a mídia genérica ignora.</p>
+                </div>
+                <div class="insights-board">
+                    <div class="insight-row"><span>01</span><strong>Confiança vem antes da oferta.</strong><em>Sem clareza, o clique não vira conversa.</em></div>
+                    <div class="insight-row"><span>02</span><strong>Canal muda por intenção.</strong><em>Busca, social e CRM cumprem papéis diferentes.</em></div>
+                    <div class="insight-row"><span>03</span><strong>Idade não explica comportamento.</strong><em>Perfil, objeção e momento de vida explicam mais.</em></div>
+                    <div class="insight-row"><span>04</span><strong>Atendimento é parte da mídia.</strong><em>Performance termina onde a operação responde.</em></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section section-dark" id="metodo">
         <div class="container">
             <div class="section-header" data-reveal>
@@ -3443,6 +3526,13 @@
                 <p class="section-subtitle">A Media.K usa perfis para decidir canal, mensagem, objeção e cadência. Não é persona decorativa: é matriz de operação.</p>
             </div>
             <div class="profile-lab-shell" data-reveal>
+                <div class="profile-compass" aria-label="Mapa estratégico dos perfis Media.K">
+                    <div class="compass-core"><span>Media.K</span><strong>Perfil → Canal → Mensagem → CRM</strong></div>
+                    <div class="compass-axis axis-top">Gatilho</div>
+                    <div class="compass-axis axis-right">Canal</div>
+                    <div class="compass-axis axis-bottom">Objeção</div>
+                    <div class="compass-axis axis-left">Aplicação</div>
+                </div>
                 <div class="profile-lab-legend">
                     <span>Gatilho</span><span>Canal</span><span>Objeção</span><span>Uso Media.K</span>
                 </div>
@@ -3479,6 +3569,12 @@
                         </div>
                         <div class="dashboard-chart ops-chart"><div class="chart-header"><span class="chart-title">Demanda por etapa do funil</span><span class="chart-period">semana atual</span></div><div class="funnel-bars"><div><span>Busca</span><i style="height:84%"></i></div><div><span>Lead</span><i style="height:68%"></i></div><div><span>CRM</span><i style="height:52%"></i></div><div><span>Agenda</span><i style="height:38%"></i></div><div><span>Loja</span><i style="height:31%"></i></div></div></div>
                         <div class="dashboard-channels"><div class="channel-bar-item"><span>Google Search</span><div class="channel-bar"><div class="channel-bar-fill" data-width="82%"></div></div><strong>82%</strong></div><div class="channel-bar-item"><span>Meta Ads</span><div class="channel-bar"><div class="channel-bar-fill" data-width="74%"></div></div><strong>74%</strong></div><div class="channel-bar-item"><span>CRM Follow-up</span><div class="channel-bar"><div class="channel-bar-fill" data-width="66%"></div></div><strong>66%</strong></div><div class="channel-bar-item"><span>Regional Sul</span><div class="channel-bar"><div class="channel-bar-fill" data-width="58%"></div></div><strong>58%</strong></div></div>
+                        <div class="dashboard-worktable">
+                            <div><span>Loja</span><span>Perfil dominante</span><span>Próxima ação</span><span>Status</span></div>
+                            <div><strong>SP-042</strong><span>Segurança</span><span>retorno humano</span><em>prioridade</em></div>
+                            <div><strong>RJ-018</strong><span>Afeto</span><span>prova social</span><em>nutrição</em></div>
+                            <div><strong>MG-031</strong><span>Autonomia</span><span>comparativo</span><em>teste</em></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3606,8 +3702,9 @@
             </div>
             <div class="audionova-operation" data-reveal>
                 <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde auditiva | público 60+ | presença nacional</span></div></div>
+                <div class="operation-scale-ribbon"><span>Meta</span><i></i><span>Google</span><i></i><span>CRM</span><i></i><span>BI</span><i></i><span>Atendimento</span></div>
                 <div class="operation-map">
-                    <div class="operation-core"><strong>280</strong><span>lojas conectadas</span></div>
+                    <div class="operation-core"><strong>280</strong><span>lojas conectadas</span><small>operação nacional</small></div>
                     <div class="operation-link link-1"><b>Meta</b><span>descoberta</span></div>
                     <div class="operation-link link-2"><b>Google</b><span>intenção</span></div>
                     <div class="operation-link link-3"><b>CRM</b><span>follow-up</span></div>
@@ -3957,7 +4054,7 @@
 
     <!-- FLOATING CTA (MOBILE) -->
     <div class="floating-cta" id="floatingCta">
-        <a href="#diagnostico" class="btn btn-primary" aria-label="Solicitar diagnóstico">Solicitar Diagnóstico &rarr;</a>
+        <a href="#topo" class="btn btn-primary" aria-label="Solicitar diagnóstico">Solicitar Diagnóstico &rarr;</a>
     </div>
 
     <script>

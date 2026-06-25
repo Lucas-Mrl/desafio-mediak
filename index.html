@@ -2771,6 +2771,91 @@
         }
 
         /* ============================================
+           MEMORABLE EXPERIENCE LAYER
+           ============================================ */
+        .silver-wow-section { background:#07111f; color:#fff; overflow:hidden; position:relative; }
+        .silver-wow-section::before { content:''; position:absolute; inset:0; background:linear-gradient(120deg, rgba(5,116,221,.18), transparent 42%), radial-gradient(circle at 78% 35%, rgba(2,211,241,.18), transparent 34%); pointer-events:none; }
+        .silver-wow-grid { display:grid; grid-template-columns:.88fr 1.12fr; gap:48px; align-items:center; position:relative; z-index:1; }
+        .silver-wow-copy .section-label, .silver-wow-copy .section-title { color:#fff; }
+        .silver-wow-copy .section-subtitle { color:#aeb9c8; max-width:560px; }
+        .silver-timeline { display:grid; gap:10px; margin-top:28px; max-width:520px; }
+        .silver-timeline div { display:grid; grid-template-columns:74px 1fr; gap:14px; align-items:center; padding:12px 0; border-top:1px solid rgba(255,255,255,.12); }
+        .silver-timeline strong { color:var(--cyan); font-size:1.15rem; }
+        .silver-timeline span { color:#c8d3e1; font-size:.9rem; }
+        .silver-wow-visual { min-height:520px; display:grid; place-items:center; }
+        .silver-orbit { width:min(560px, 100%); aspect-ratio:1; border:1px solid rgba(255,255,255,.14); border-radius:50%; position:relative; background:radial-gradient(circle, rgba(255,255,255,.08), transparent 62%); box-shadow:inset 0 0 80px rgba(2,211,241,.08); }
+        .silver-orbit::before, .silver-orbit::after { content:''; position:absolute; inset:12%; border:1px dashed rgba(255,255,255,.15); border-radius:50%; }
+        .silver-orbit::after { inset:27%; }
+        .silver-core { position:absolute; inset:31%; border-radius:50%; background:linear-gradient(135deg, #fff, #dff8ff); color:#07111f; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; box-shadow:0 26px 90px rgba(2,211,241,.24); z-index:2; }
+        .silver-core span { font-weight:800; color:var(--blue); }
+        .silver-core strong { font-size:clamp(2.8rem, 8vw, 5.7rem); line-height:.9; letter-spacing:0; }
+        .silver-core small { max-width:140px; line-height:1.25; color:#496176; }
+        .silver-node { position:absolute; width:136px; min-height:86px; border-radius:18px; padding:14px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); backdrop-filter:blur(14px); box-shadow:0 18px 48px rgba(0,0,0,.18); z-index:3; }
+        .silver-node strong { display:block; color:#fff; font-size:1.45rem; line-height:1; margin-bottom:5px; }
+        .silver-node span { color:#c8d3e1; font-size:.76rem; line-height:1.25; }
+        .node-a{left:2%;top:19%;}.node-b{right:3%;top:14%;}.node-c{right:1%;bottom:18%;}.node-d{left:5%;bottom:15%;}
+        .saturation-compare { position:relative; z-index:1; margin-top:36px; padding:22px; border-radius:22px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:1fr 1fr .9fr; gap:18px; align-items:center; }
+        .compare-track div { display:flex; justify-content:space-between; gap:12px; margin-bottom:10px; color:#dbe7f5; font-size:.82rem; }
+        .compare-track strong { color:#fff; }
+        .compare-track i { display:block; height:12px; border-radius:999px; background:linear-gradient(90deg, var(--pink), var(--yellow)); }
+        .compare-track.mature i { background:linear-gradient(90deg, var(--blue), var(--cyan)); }
+        .compare-insight { color:#c8d3e1; font-size:.88rem; line-height:1.55; }
+
+        .profile-lab { background:linear-gradient(180deg, #f7fbff 0%, #fff 100%); }
+        .profile-lab-shell { padding:26px; border:1px solid rgba(15,23,42,.08); border-radius:28px; background:linear-gradient(135deg, rgba(255,255,255,.96), rgba(239,248,255,.86)); box-shadow:0 30px 90px rgba(15,23,42,.08); }
+        .profile-lab-legend { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px; color:#64748b; font-size:.72rem; text-transform:uppercase; font-weight:800; letter-spacing:.08em; }
+        .advanced-profile-matrix { gap:14px; }
+        .advanced-profile-matrix .profile-card { position:relative; overflow:hidden; padding:22px; border-radius:20px; min-height:304px; border:1px solid rgba(15,23,42,.08); transition:transform .25s ease, box-shadow .25s ease; }
+        .advanced-profile-matrix .profile-card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(15,23,42,.1); }
+        .profile-avatar { width:48px; height:48px; border-radius:16px; display:grid; place-items:center; color:#fff; font-weight:800; margin-bottom:14px; background:linear-gradient(135deg, var(--blue), var(--cyan)); }
+        .profile-card p { color:#526176; font-size:.82rem; line-height:1.5; margin-bottom:12px; }
+        .profile-use { margin-top:14px; padding:12px; border-radius:14px; background:rgba(5,116,221,.07); color:#0f3f70; font-size:.78rem; line-height:1.45; font-weight:600; }
+        .profile-afeto .profile-avatar{background:linear-gradient(135deg,#fd3b66,#ff8aa2)} .profile-integracao .profile-avatar{background:linear-gradient(135deg,#0574dd,#02d3f1)} .profile-motivacao .profile-avatar{background:linear-gradient(135deg,#f59e0b,#ffd400)} .profile-autonomia .profile-avatar{background:linear-gradient(135deg,#0f172a,#64748b)} .profile-seguranca .profile-avatar{background:linear-gradient(135deg,#10b981,#67e8f9)} .profile-legado .profile-avatar{background:linear-gradient(135deg,#7c3aed,#fd3b66)}
+
+        .dashboard-command { background:#eef3f8; }
+        .real-dashboard { max-width:1120px; border-radius:10px; background:#111827; box-shadow:0 30px 90px rgba(15,23,42,.22); }
+        .command-grid { display:grid; grid-template-columns:190px 1fr; gap:0; padding:0; min-height:560px; }
+        .dashboard-sidebar { padding:22px; background:#0b1220; border-right:1px solid rgba(255,255,255,.07); display:flex; flex-direction:column; gap:12px; color:#94a3b8; font-size:.78rem; }
+        .dashboard-sidebar strong { color:#fff; font-size:.9rem; margin-bottom:8px; }
+        .dashboard-sidebar span { padding:9px 10px; border-radius:8px; background:rgba(255,255,255,.04); }
+        .dashboard-main { padding:22px; }
+        .ops-chart { min-height:260px; }
+        .funnel-bars { height:210px; display:grid; grid-template-columns:repeat(5,1fr); gap:18px; align-items:end; padding-top:18px; }
+        .funnel-bars div { height:100%; display:flex; flex-direction:column; justify-content:flex-end; gap:8px; color:#94a3b8; font-size:.72rem; }
+        .funnel-bars i { display:block; width:100%; border-radius:8px 8px 0 0; background:linear-gradient(180deg, var(--cyan), var(--blue)); min-height:28px; box-shadow:0 0 32px rgba(2,211,241,.16); }
+
+        .cases-theater { background:#fff; }
+        .audionova-operation { padding:34px; border-radius:28px; background:#07111f; color:#fff; overflow:hidden; position:relative; box-shadow:0 28px 90px rgba(15,23,42,.2); }
+        .audionova-operation::before { content:''; position:absolute; inset:-30% -10% auto auto; width:520px; height:520px; background:radial-gradient(circle, rgba(2,211,241,.22), transparent 70%); }
+        .audionova-operation > * { position:relative; z-index:1; }
+        .operation-map { min-height:420px; position:relative; margin:22px 0; border-radius:24px; border:1px solid rgba(255,255,255,.12); background:radial-gradient(circle at center, rgba(2,211,241,.12), rgba(255,255,255,.03) 42%, transparent 68%); }
+        .operation-core { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:184px; height:184px; border-radius:50%; display:grid; place-items:center; align-content:center; text-align:center; background:#fff; color:#07111f; box-shadow:0 24px 70px rgba(2,211,241,.22); }
+        .operation-core strong { font-size:4.2rem; line-height:.9; }
+        .operation-core span { font-size:.8rem; font-weight:700; }
+        .operation-link { position:absolute; width:138px; padding:14px; border-radius:16px; background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.14); backdrop-filter:blur(12px); }
+        .operation-link b { display:block; color:#fff; margin-bottom:3px; } .operation-link span { color:#aeb9c8; font-size:.78rem; }
+        .link-1{left:9%;top:18%;}.link-2{right:10%;top:16%;}.link-3{left:8%;bottom:16%;}.link-4{right:12%;bottom:14%;}.link-5{left:50%;bottom:4%;transform:translateX(-50%);}
+        .operation-notes { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+        .operation-notes div { padding:18px; border-radius:16px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); }
+        .operation-notes span { display:block; color:var(--cyan); font-weight:800; font-size:.74rem; text-transform:uppercase; margin-bottom:8px; }
+        .operation-notes p { color:#c8d3e1; font-size:.86rem; line-height:1.55; }
+        .case-mini-strip { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+        .case-mini-strip article { display:flex; align-items:center; gap:12px; padding:16px; border:1px solid rgba(15,23,42,.08); border-radius:16px; background:#fff; box-shadow:0 14px 36px rgba(15,23,42,.05); }
+        .case-mini-strip img { width:48px; max-height:38px; object-fit:contain; }
+        .case-mini-strip strong { display:block; color:#0f172a; } .case-mini-strip span { display:block; color:#64748b; font-size:.78rem; }
+
+        .diagnosis-cta-grid { display:grid; grid-template-columns:1fr .72fr; gap:42px; align-items:center; }
+        .diagnosis-cta h2 { color:#fff; margin-bottom:16px; } .diagnosis-cta p { color:#aeb9c8; max-width:680px; }
+        .diagnosis-cta-panel { padding:28px; border-radius:22px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); display:grid; gap:14px; }
+        .diagnosis-cta-panel strong { color:#fff; font-size:1.7rem; } .diagnosis-cta-panel span { color:#c8d3e1; }
+        .contact-cta { background:linear-gradient(180deg,#fff,#f7fbff); }
+        .contact-cta-box { max-width:760px; margin:0 auto; text-align:center; padding:44px; border-radius:28px; border:1px solid rgba(15,23,42,.08); background:#fff; box-shadow:0 24px 70px rgba(15,23,42,.07); }
+
+        @media (max-width:1023px) { .silver-wow-grid,.saturation-compare,.command-grid,.operation-notes,.diagnosis-cta-grid,.case-mini-strip{grid-template-columns:1fr;} .silver-wow-visual{min-height:430px;} .profile-lab-legend{display:none;} .operation-map{min-height:500px;} }
+        @media (max-width:640px) { .silver-node{width:112px;} .silver-core strong{font-size:3rem;} .silver-orbit{width:100%;} .operation-core{width:150px;height:150px;} .operation-core strong{font-size:3.2rem;} .operation-link{width:118px;padding:12px;} .audionova-operation,.profile-lab-shell,.contact-cta-box{padding:22px;} }
+
+
+        /* ============================================
            HEADER + FIRST FOLD REFINEMENT
            ============================================ */
         .navbar {
@@ -3233,24 +3318,33 @@
     </section>
 
     <!-- SECTION: SILVER ECONOMY NUMBERS -->
-    <section class="section opportunity-section" id="silver-economy">
+    <section class="section silver-wow-section" id="silver-economy">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-label">Silver Economy</span>
-                <h2 class="section-title">O tamanho comercial da oportunidade 50+</h2>
-                <p class="section-subtitle">Cada número precisa levar a uma decisão de negócio: existe demanda, existe dinheiro e ainda existe espaço para marcas que sabem entrar.</p>
+            <div class="silver-wow-grid">
+                <div class="silver-wow-copy" data-reveal>
+                    <span class="section-label">Silver Economy</span>
+                    <h2 class="section-title">R$ 2 trilhões não são uma tendência. São um mercado em disputa.</h2>
+                    <p class="section-subtitle">A diferença está em enxergar comportamento, canal e confiança antes de comprar mídia.</p>
+                    <div class="silver-timeline" aria-label="Linha do tempo da oportunidade 50+">
+                        <div><strong>2025</strong><span>demanda madura já ativa no digital</span></div>
+                        <div><strong>2030</strong><span>mais categorias disputando atenção</span></div>
+                        <div><strong>2050</strong><span>longevidade como eixo de crescimento</span></div>
+                    </div>
+                </div>
+                <div class="silver-wow-visual" data-reveal>
+                    <div class="silver-orbit">
+                        <div class="silver-core"><span>R$</span><strong>2 tri</strong><small>em movimento anual</small></div>
+                        <div class="silver-node node-a"><strong>54 mi</strong><span>consumidores</span></div>
+                        <div class="silver-node node-b"><strong>85%</strong><span>smartphone</span></div>
+                        <div class="silver-node node-c"><strong>57%</strong><span>sub-representados</span></div>
+                        <div class="silver-node node-d"><strong>50+</strong><span>perfis, não idade</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="opportunity-infographic" data-reveal>
-                <div class="opportunity-lead">
-                    <div class="mega-number">R$ 2 tri<span>em movimento anual</span></div>
-                    <p>O mercado 50+ já tem escala, poder de compra e baixa saturação relativa. A oportunidade não é demográfica: é comercial.</p>
-                </div>
-                <div class="opportunity-flow" aria-label="Infográfico da oportunidade 50+">
-                    <div class="flow-step"><div class="flow-index">01</div><div><strong>54 milhões de consumidores</strong><p>Base grande o suficiente para sustentar estratégia própria.</p></div><div class="flow-signal"><span style="width:74%"></span></div></div>
-                    <div class="flow-step"><div class="flow-index">02</div><div><strong>85% usam smartphone</strong><p>O 50+ pesquisa, compara e decide também no digital.</p></div><div class="flow-signal"><span style="width:85%"></span></div></div>
-                    <div class="flow-step"><div class="flow-index">03</div><div><strong>57% não se sentem representados</strong><p>A barreira não é demanda; é abordagem, clareza e confiança.</p></div><div class="flow-signal"><span style="width:57%"></span></div></div>
-                    <div class="flow-step"><div class="flow-index">04</div><div><strong>Menor competição qualificada</strong><p>Marcas que aprendem primeiro compram mídia melhor e retêm mais.</p></div><div class="flow-signal"><span style="width:68%"></span></div></div>
-                </div>
+            <div class="saturation-compare" data-reveal>
+                <div class="compare-track saturated"><div><span>mercado jovem</span><strong>saturado</strong></div><i style="width:88%"></i></div>
+                <div class="compare-track mature"><div><span>mercado 50+</span><strong>subexplorado</strong></div><i style="width:46%"></i></div>
+                <div class="compare-insight">A janela competitiva está em entender o 50+ antes da categoria tratar esse público como massa genérica.</div>
             </div>
         </div>
     </section>
@@ -3341,124 +3435,50 @@
     </section>
 
     <!-- SECTION: INTELLIGENCE -->
-    <section class="section profile-framework" id="inteligencia">
+    <section class="section profile-framework profile-lab" id="inteligencia">
         <div class="container">
             <div class="section-header" data-reveal>
                 <span class="section-label">Framework proprietário</span>
-                <h2 class="section-title">6 perfis comportamentais do consumidor 50+</h2>
-                <p class="section-subtitle">Os perfis ajudam a transformar idade em comportamento: motivação, canal, mensagem e gatilho de decisão.</p>
+                <h2 class="section-title">6 perfis comportamentais para transformar idade em estratégia</h2>
+                <p class="section-subtitle">A Media.K usa perfis para decidir canal, mensagem, objeção e cadência. Não é persona decorativa: é matriz de operação.</p>
             </div>
-            <div class="profile-matrix" data-reveal>
-                <div class="profile-card"><span class="profile-kicker">Perfil 01</span><h4>Afeto</h4><div class="profile-row"><span>Decisão</span><span>Confiança, família e cuidado.</span></div><div class="profile-row"><span>Mensagem</span><span>Proximidade, acolhimento e prova social.</span></div></div>
-                <div class="profile-card"><span class="profile-kicker">Perfil 02</span><h4>Integração</h4><div class="profile-row"><span>Decisão</span><span>Pertencimento e conexão.</span></div><div class="profile-row"><span>Mensagem</span><span>Comunidade, rotina e facilidade.</span></div></div>
-                <div class="profile-card"><span class="profile-kicker">Perfil 03</span><h4>Motivação</h4><div class="profile-row"><span>Decisão</span><span>Energia, descoberta e evolução.</span></div><div class="profile-row"><span>Mensagem</span><span>Novidade, performance e autonomia.</span></div></div>
-                <div class="profile-card"><span class="profile-kicker">Perfil 04</span><h4>Autonomia</h4><div class="profile-row"><span>Decisão</span><span>Independência e controle.</span></div><div class="profile-row"><span>Mensagem</span><span>Clareza, comparação e domínio.</span></div></div>
-                <div class="profile-card"><span class="profile-kicker">Perfil 05</span><h4>Segurança</h4><div class="profile-row"><span>Decisão</span><span>Risco baixo e reputação.</span></div><div class="profile-row"><span>Mensagem</span><span>Garantias, atendimento e evidências.</span></div></div>
-                <div class="profile-card"><span class="profile-kicker">Perfil 06</span><h4>Legado</h4><div class="profile-row"><span>Decisão</span><span>Valor, continuidade e impacto.</span></div><div class="profile-row"><span>Mensagem</span><span>Qualidade, durabilidade e propósito.</span></div></div>
+            <div class="profile-lab-shell" data-reveal>
+                <div class="profile-lab-legend">
+                    <span>Gatilho</span><span>Canal</span><span>Objeção</span><span>Uso Media.K</span>
+                </div>
+                <div class="profile-matrix advanced-profile-matrix">
+                    <article class="profile-card profile-afeto"><div class="profile-avatar">AF</div><span class="profile-kicker">Perfil 01</span><h4>Afeto</h4><p>Valoriza cuidado e proximidade.</p><div class="profile-row"><span>Canal</span><span>WhatsApp, Facebook, indicação</span></div><div class="profile-row"><span>Objeção</span><span>medo de ser mal atendido</span></div><div class="profile-use">Usamos prova social e linguagem acolhedora.</div></article>
+                    <article class="profile-card profile-integracao"><div class="profile-avatar">IN</div><span class="profile-kicker">Perfil 02</span><h4>Integração</h4><p>Busca pertencimento e rotina simples.</p><div class="profile-row"><span>Canal</span><span>redes sociais, conteúdo, comunidade</span></div><div class="profile-row"><span>Objeção</span><span>parecer complicado ou distante</span></div><div class="profile-use">Criamos pontes entre hábito e adoção.</div></article>
+                    <article class="profile-card profile-motivacao"><div class="profile-avatar">MO</div><span class="profile-kicker">Perfil 03</span><h4>Motivação</h4><p>Responde a descoberta e evolução.</p><div class="profile-row"><span>Canal</span><span>Google, YouTube, landing pages</span></div><div class="profile-row"><span>Objeção</span><span>não ver ganho prático</span></div><div class="profile-use">Mostramos benefício claro e próximo passo.</div></article>
+                    <article class="profile-card profile-autonomia"><div class="profile-avatar">AU</div><span class="profile-kicker">Perfil 04</span><h4>Autonomia</h4><p>Quer controle, comparação e clareza.</p><div class="profile-row"><span>Canal</span><span>search, remarketing, CRM</span></div><div class="profile-row"><span>Objeção</span><span>sentir pressão comercial</span></div><div class="profile-use">Organizamos argumentos e opções.</div></article>
+                    <article class="profile-card profile-seguranca"><div class="profile-avatar">SE</div><span class="profile-kicker">Perfil 05</span><h4>Segurança</h4><p>Decide por reputação e evidência.</p><div class="profile-row"><span>Canal</span><span>Google, reviews, atendimento humano</span></div><div class="profile-row"><span>Objeção</span><span>risco, preço e confiança</span></div><div class="profile-use">Aceleramos confiança com garantias e dados.</div></article>
+                    <article class="profile-card profile-legado"><div class="profile-avatar">LE</div><span class="profile-kicker">Perfil 06</span><h4>Legado</h4><p>Compra valor, continuidade e impacto.</p><div class="profile-row"><span>Canal</span><span>conteúdo, relacionamento, email</span></div><div class="profile-row"><span>Objeção</span><span>não perceber valor de longo prazo</span></div><div class="profile-use">Conectamos escolha a futuro e qualidade.</div></article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION: DASHBOARD MOCKUP -->
-    <section class="dashboard-section" id="dashboard">
+    <section class="dashboard-section dashboard-command" id="dashboard">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Visibilidade Total</span>
-                <h2 class="section-title">Exemplo de visibilidade operacional entregue pela Media.K.</h2>
-                <p class="section-subtitle">O dashboard mostra quais canais, perfis, regiões e campanhas deixam de ser clique e viram atendimento, agenda e receita.</p>
-            <div class="dashboard-note">Dados ilustrativos para demonstrar a estrutura de decisão</div>
+                <span class="section-label">Central de operação</span>
+                <h2 class="section-title">Menos mockup. Mais sala de controle.</h2>
+                <p class="section-subtitle">A operação conecta mídia, CRM e BI para enxergar demanda por perfil, loja, canal e etapa de atendimento.</p>
+                <div class="dashboard-note">Exemplo ilustrativo da lógica operacional Media.K</div>
             </div>
-            <div class="dashboard-mock" data-reveal id="dashboardMock">
-                <div class="dashboard-chrome">
-                    <span class="chrome-dot red"></span>
-                    <span class="chrome-dot yellow"></span>
-                    <span class="chrome-dot green"></span>
-                    <span class="chrome-url">app.mediak.com.br/dashboard</span>
-                </div>
-                <div class="dashboard-content">
-                    <div class="dashboard-kpis">
-                        <div class="kpi-card">
-                            <div class="kpi-label">CPL Qualificado</div>
-                            <div class="kpi-value">R$ 28</div>
-                            <div class="kpi-change">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-                                -12% vs. mês anterior
-                            </div>
+            <div class="dashboard-mock real-dashboard" data-reveal id="dashboardMock">
+                <div class="dashboard-chrome"><span class="chrome-dot red"></span><span class="chrome-dot yellow"></span><span class="chrome-dot green"></span><span class="chrome-url">Media.K BI / Audiences / 50+ / lojas</span></div>
+                <div class="dashboard-content command-grid">
+                    <aside class="dashboard-sidebar"><strong>Filtros</strong><span>Região: Brasil</span><span>Perfil: 50+</span><span>Canal: Meta + Google</span><span>Status: agendamento</span></aside>
+                    <div class="dashboard-main">
+                        <div class="dashboard-kpis">
+                            <div class="kpi-card"><div class="kpi-label">Leads qualificados</div><div class="kpi-value">1.847</div><div class="kpi-change">+24% no período</div></div>
+                            <div class="kpi-card"><div class="kpi-label">Lojas com demanda</div><div class="kpi-value">280</div><div class="kpi-change">visão nacional</div></div>
+                            <div class="kpi-card"><div class="kpi-label">Perfis ativos</div><div class="kpi-value">6</div><div class="kpi-change">mensagens por intenção</div></div>
                         </div>
-                        <div class="kpi-card">
-                            <div class="kpi-label">ROAS</div>
-                            <div class="kpi-value">4.2x</div>
-                            <div class="kpi-change">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-                                +18% vs. mês anterior
-                            </div>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-label">Demandas 50+</div>
-                            <div class="kpi-value">1.847</div>
-                            <div class="kpi-change">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-                                +24% vs. mês anterior
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dashboard-chart">
-                        <div class="chart-header">
-                            <span class="chart-title">Demanda 50+ por Semana</span>
-                            <span class="chart-period">Últimos 30 dias</span>
-                        </div>
-                        <svg viewBox="0 0 800 200" preserveAspectRatio="none" id="dashboardSvgChart">
-                            <!-- Grid lines -->
-                            <line x1="0" y1="50" x2="800" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <!-- Area fill -->
-                            <path d="M0 180 L100 150 L200 130 L300 120 L400 90 L500 70 L600 55 L700 40 L800 25 L800 200 L0 200 Z" fill="url(#chartGradient)" opacity="0.3"/>
-                            <!-- Gradient def -->
-                            <defs>
-                                <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stop-color="#0574dd" stop-opacity="0.4"/>
-                                    <stop offset="100%" stop-color="#0574dd" stop-opacity="0"/>
-                                </linearGradient>
-                            </defs>
-                            <!-- Line -->
-                            <polyline class="chart-line" id="chartLine" points="0,180 100,150 200,130 300,120 400,90 500,70 600,55 700,40 800,25" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <!-- Data points -->
-                            <circle cx="0" cy="180" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="100" cy="150" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="200" cy="130" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="300" cy="120" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="400" cy="90" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="500" cy="70" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="600" cy="55" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="700" cy="40" r="4" fill="var(--blue)" opacity="0.8"/>
-                            <circle cx="800" cy="25" r="5" fill="var(--cyan)" stroke="#fff" stroke-width="2"/>
-                        </svg>
-                    </div>
-
-                    <div class="dashboard-channels">
-                        <div class="channel-bar-item">
-                            <span class="channel-bar-label">Meta Ads</span>
-                            <div class="channel-bar-track">
-                                <div class="channel-bar-fill meta" data-width="42%" style="width:0%;"></div>
-                            </div>
-                            <span class="channel-bar-pct">42%</span>
-                        </div>
-                        <div class="channel-bar-item">
-                            <span class="channel-bar-label">Google Ads</span>
-                            <div class="channel-bar-track">
-                                <div class="channel-bar-fill google" data-width="35%" style="width:0%;"></div>
-                            </div>
-                            <span class="channel-bar-pct">35%</span>
-                        </div>
-                        <div class="channel-bar-item">
-                            <span class="channel-bar-label">Taboola</span>
-                            <div class="channel-bar-track">
-                                <div class="channel-bar-fill taboola" data-width="23%" style="width:0%;"></div>
-                            </div>
-                            <span class="channel-bar-pct">23%</span>
-                        </div>
+                        <div class="dashboard-chart ops-chart"><div class="chart-header"><span class="chart-title">Demanda por etapa do funil</span><span class="chart-period">semana atual</span></div><div class="funnel-bars"><div><span>Busca</span><i style="height:84%"></i></div><div><span>Lead</span><i style="height:68%"></i></div><div><span>CRM</span><i style="height:52%"></i></div><div><span>Agenda</span><i style="height:38%"></i></div><div><span>Loja</span><i style="height:31%"></i></div></div></div>
+                        <div class="dashboard-channels"><div class="channel-bar-item"><span>Google Search</span><div class="channel-bar"><div class="channel-bar-fill" data-width="82%"></div></div><strong>82%</strong></div><div class="channel-bar-item"><span>Meta Ads</span><div class="channel-bar"><div class="channel-bar-fill" data-width="74%"></div></div><strong>74%</strong></div><div class="channel-bar-item"><span>CRM Follow-up</span><div class="channel-bar"><div class="channel-bar-fill" data-width="66%"></div></div><strong>66%</strong></div><div class="channel-bar-item"><span>Regional Sul</span><div class="channel-bar"><div class="channel-bar-fill" data-width="58%"></div></div><strong>58%</strong></div></div>
                     </div>
                 </div>
             </div>
@@ -3577,34 +3597,33 @@
     </section>
 
     <!-- SECTION: CASES -->
-    <section class="section" id="cases">
+    <section class="section cases-theater" id="cases">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Resultados Reais</span>
-                <h2 class="section-title">Provas de quem já captura demanda 50+</h2>
-                <p class="section-subtitle">AudioNova, Sonova e Clarins mostram como a oportunidade vira operação quando mídia, CRM e inteligência de dados trabalham juntos.</p>
+                <span class="section-label">Prova de escala</span>
+                <h2 class="section-title">AudioNova não é um case. É uma operação nacional.</h2>
+                <p class="section-subtitle">Mídia, CRM, BI e atendimento precisam conversar quando a demanda sai do anúncio e chega à loja.</p>
             </div>
-            <div class="cases-premium-grid">
-                <article class="case-anchor" data-reveal>
-                    <div class="case-anchor-grid">
-                        <div>
-                            <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde Auditiva | Público 60+</span></div></div>
-                            <div class="case-step"><div class="case-step-label desafio">DESAFIO</div><p>Capturar demanda 60+ em escala nacional para 280 lojas, com rastreamento do clique ao agendamento presencial.</p></div>
-                            <div class="case-step"><div class="case-step-label solucao">SOLUÇÃO</div><p>Funil integrado com CRM + BI por loja, canal e perfil comportamental para identificar onde o mercado 50+ realmente convertia.</p></div>
-                            <div class="case-step"><div class="case-step-label resultado">RESULTADO</div><p>Controle de performance loja a loja para escalar a captura de demanda madura com previsibilidade.</p></div>
-                        </div>
-                        <div class="case-anchor-metrics">
-                            <div class="case-metric"><strong>280</strong><span>lojas integradas à operação</span></div>
-                            <div class="case-metric"><strong>5+</strong><span>anos de parceria</span></div>
-                            <div class="case-metric"><strong>CRM + BI</strong><span>do clique ao atendimento presencial</span></div>
-                            <div class="case-metric"><strong>Multicanal</strong><span>mídia por região, loja e perfil</span></div>
-                        </div>
-                    </div>
-                </article>
-                <div class="case-mini-stack">
-                    <article class="case-mini" data-reveal><div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" class="case-brand-logo" loading="lazy"><div><h4>Clarins</h4><span>Cosméticos Premium</span></div></div><div class="case-step"><div class="case-step-label resultado">FOCO</div><p>Segmentação por perfis comportamentais, Afeto e Integração, com tracking end-to-end para demanda premium.</p></div></article>
-                    <article class="case-mini" data-reveal><div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" class="case-brand-logo" loading="lazy"><div><h4>Sonova</h4><span>Tecnologia em Áudio</span></div></div><div class="case-step"><div class="case-step-label resultado">FOCO</div><p>Distribuição inteligente de investimento por regional e otimização orientada ao atendimento real.</p></div></article>
+            <div class="audionova-operation" data-reveal>
+                <div class="case-brand"><img src="https://www.mediak.com.br/_next/static/media/7879de43c65be612f56e6821b38fb0cec9b7a4f4.7f00f7cbfdcb4e88.png" alt="AudioNova Brasil" class="case-brand-logo" loading="lazy"><div><h3>AudioNova Brasil</h3><span>Saúde auditiva | público 60+ | presença nacional</span></div></div>
+                <div class="operation-map">
+                    <div class="operation-core"><strong>280</strong><span>lojas conectadas</span></div>
+                    <div class="operation-link link-1"><b>Meta</b><span>descoberta</span></div>
+                    <div class="operation-link link-2"><b>Google</b><span>intenção</span></div>
+                    <div class="operation-link link-3"><b>CRM</b><span>follow-up</span></div>
+                    <div class="operation-link link-4"><b>BI</b><span>decisão</span></div>
+                    <div class="operation-link link-5"><b>Loja</b><span>atendimento</span></div>
                 </div>
+                <div class="operation-notes">
+                    <div><span>Desafio</span><p>Distribuir demanda 60+ em múltiplas regiões sem perder rastreabilidade entre mídia, atendimento e loja.</p></div>
+                    <div><span>Complexidade</span><p>Regional, canal, perfil comportamental, CRM e qualidade do lead precisam ser lidos juntos.</p></div>
+                    <div><span>Escala</span><p>Dashboards orientam onde investir, pausar, reforçar contato e ajustar mensagem.</p></div>
+                </div>
+            </div>
+            <div class="case-mini-strip" data-reveal>
+                <article><img src="https://www.mediak.com.br/_next/static/media/216bf49fa289340b086e444d86e2fd3b07043f09.c256b4069bd3274a.png" alt="Clarins" loading="lazy"><strong>Clarins</strong><span>demanda premium por perfil</span></article>
+                <article><img src="https://www.mediak.com.br/_next/static/media/2bd46e2947e9d5e4411ddcfb9deaf70ca13e707f.1ccb08007ba744e2.png" alt="Sonova" loading="lazy"><strong>Sonova</strong><span>dados e tecnologia em áudio</span></article>
+                <article><img src="https://www.mediak.com.br/_next/static/media/1aa30e92e0c4a03739179c36ce6aaf1f099a1358.1de4c187fb913087.png" alt="André Veículos" loading="lazy"><strong>André Veículos</strong><span>performance e presença regional</span></article>
             </div>
         </div>
     </section>
@@ -3772,204 +3791,23 @@
     </section>
 
     <!-- SECTION: DIAGNOSIS -->
-    <section class="section section-dark" id="diagnostico">
+    <section class="section section-dark diagnosis-cta" id="diagnostico">
         <div class="container">
-            <div class="diagnosis-grid">
-                <div data-reveal>
-                    <span class="section-label" style="color: var(--cyan);">Exclusivo</span>
-                    <h2 style="color:#fff; margin-bottom: 16px;">Sua empresa está deixando dinheiro na mesa no mercado 50+?</h2>
-                    <p style="color: #94a3b8; margin-bottom: 32px; line-height: 1.8;">Nosso time analisa onde sua marca já tem potencial de capturar demanda 50+, quais barreiras estão travando conversão e quais movimentos podem gerar crescimento nos próximos 90 dias.</p>
-                    <ul class="diagnosis-benefits">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Análise da oportunidade 50+ dentro do seu segmento</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Mapeamento das barreiras de comunicação, mídia e CRM que podem estar travando receita</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Leitura de quais canais e mensagens tendem a capturar demanda qualificada</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Recomendações práticas para os próximos 90 dias</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Resposta personalizada em até 24 horas úteis</span>
-                        </li>
-                    </ul>
-                </div>
-                <div data-reveal>
-                    <div id="diagFormContent">
-                        <form id="diagForm" class="form-dark" novalidate>
-                            <div class="form-group">
-                                <label for="diagNome">Nome *</label>
-                                <input type="text" id="diagNome" name="nome" placeholder="Seu nome completo" required>
-                                <span class="error-msg">Por favor, informe seu nome.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="diagEmail">E-mail *</label>
-                                <input type="email" id="diagEmail" name="email" placeholder="seu@email.com" required>
-                                <span class="error-msg">Por favor, informe um e-mail válido.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="diagTel">Telefone *</label>
-                                <input type="tel" id="diagTel" name="telefone" class="phone-mask" placeholder="(00) 00000-0000" required>
-                                <span class="error-msg">Por favor, informe um telefone válido.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="diagEmpresa">Empresa *</label>
-                                <input type="text" id="diagEmpresa" name="empresa" placeholder="Nome da sua empresa" required>
-                                <span class="error-msg">Por favor, informe sua empresa.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="diagSegmento">Segmento</label>
-                                <select id="diagSegmento" name="segmento">
-                                    <option value="">Selecione seu segmento</option>
-                                    <option value="saude">Saúde e Bem-estar</option>
-                                    <option value="varejo">Varejo</option>
-                                    <option value="financeiro">Serviços Financeiros</option>
-                                    <option value="educacao">Educação</option>
-                                    <option value="turismo">Turismo</option>
-                                    <option value="tecnologia">Tecnologia</option>
-                                    <option value="imobiliario">Imobiliário</option>
-                                    <option value="outro">Outro</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-white" style="width:100%;" aria-label="Solicitar diagnóstico gratuito">Solicitar Diagnóstico Gratuito &rarr;</button>
-                        </form>
-                    </div>
-                    <div id="diagFormSuccess" class="form-success">
-                        <div class="success-icon" style="background: rgba(2,211,241,0.15);">&#10003;</div>
-                        <h4 style="color: var(--cyan);">Diagnóstico solicitado!</h4>
-                        <p style="color: #94a3b8;">Recebemos sua solicitação. Nossa equipe entrará em contato em até 24h com sua análise personalizada.</p>
-                    </div>
-                </div>
+            <div class="diagnosis-cta-grid">
+                <div data-reveal><span class="section-label" style="color: var(--cyan);">Diagnóstico</span><h2>Sua empresa já tem sinais de demanda 50+. Falta descobrir onde eles estão.</h2><p>Concentre o próximo passo no formulário principal da primeira dobra. A Media.K avalia segmento, canal, barreiras e potencial de captura.</p></div>
+                <div class="diagnosis-cta-panel" data-reveal><strong>Leitura em 24h</strong><span>mercado, perfil, canal, CRM e oportunidades imediatas</span><a href="#topo" class="btn btn-white">Voltar ao diagnóstico do hero</a></div>
             </div>
         </div>
     </section>
 
     <!-- SECTION: MAIN FORM -->
-    <section class="section" id="contato">
+    <section class="section contact-cta" id="contato">
         <div class="container">
-            <div class="section-header" data-reveal>
+            <div class="contact-cta-box" data-reveal>
                 <span class="section-label">Contato</span>
-                <h2 class="section-title">Vamos conversar sobre crescimento?</h2>
-                <p class="section-subtitle">Conte sobre sua operação. Nosso time responde com uma proposta personalizada.</p>
-            </div>
-            <div class="main-form-grid">
-                <div class="main-form-trust" data-reveal>
-                    <div class="trust-badge">
-                        <div class="badge-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <div>
-                            <h4>Dados Protegidos</h4>
-                            <p>Suas informações são tratadas com total sigilo e segurança.</p>
-                        </div>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        </div>
-                        <div>
-                            <h4>Resposta em 24h</h4>
-                            <p>Nosso time responde com uma análise personalizada rapidamente.</p>
-                        </div>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <div>
-                            <h4>Sem Compromisso</h4>
-                            <p>O diagnóstico é gratuito. Você decide se faz sentido seguir.</p>
-                        </div>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <div>
-                            <h4>Google & Meta Partner</h4>
-                            <p>Certificações oficiais das maiores plataformas de mídia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card main-form-card" data-reveal>
-                    <div id="mainFormContent">
-                        <form id="mainForm" novalidate>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="mainNome">Nome *</label>
-                                    <input type="text" id="mainNome" name="nome" placeholder="Seu nome" required>
-                                    <span class="error-msg">Por favor, informe seu nome.</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mainEmpresa">Empresa *</label>
-                                    <input type="text" id="mainEmpresa" name="empresa" placeholder="Nome da empresa" required>
-                                    <span class="error-msg">Por favor, informe sua empresa.</span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="mainEmail">E-mail *</label>
-                                    <input type="email" id="mainEmail" name="email" placeholder="seu@email.com" required>
-                                    <span class="error-msg">Por favor, informe um e-mail válido.</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mainTel">Telefone *</label>
-                                    <input type="tel" id="mainTel" name="telefone" class="phone-mask" placeholder="(00) 00000-0000" required>
-                                    <span class="error-msg">Por favor, informe um telefone válido.</span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="mainSegmento">Segmento</label>
-                                    <select id="mainSegmento" name="segmento">
-                                        <option value="">Selecione</option>
-                                        <option value="saude">Saúde e Bem-estar</option>
-                                        <option value="varejo">Varejo</option>
-                                        <option value="financeiro">Serviços Financeiros</option>
-                                        <option value="educacao">Educação</option>
-                                        <option value="turismo">Turismo</option>
-                                        <option value="tecnologia">Tecnologia</option>
-                                        <option value="imobiliario">Imobiliário</option>
-                                        <option value="outro">Outro</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mainPorte">Porte da empresa</label>
-                                    <select id="mainPorte" name="porte">
-                                        <option value="">Selecione</option>
-                                        <option value="mei">MEI</option>
-                                        <option value="pequena">Pequena (até 50 funcionários)</option>
-                                        <option value="media">Média (50 a 500 funcionários)</option>
-                                        <option value="grande">Grande (500+ funcionários)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="mainMensagem">Mensagem</label>
-                                <textarea id="mainMensagem" name="mensagem" placeholder="Conte sobre seu objetivo no mercado 50+..." rows="4"></textarea>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="mainPrivacy" name="privacy" required>
-                                <label for="mainPrivacy">Concordo com a <a href="https://www.mediak.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> e autorizo o contato pela Media.K.</label>
-                            </div>
-                            <span class="error-msg" id="privacyError" style="margin-top:-12px; margin-bottom:12px;">Você precisa concordar com a política de privacidade.</span>
-                            <button type="submit" class="btn btn-primary" style="width:100%;" aria-label="Enviar formulário de contato">Enviar Mensagem &rarr;</button>
-                        </form>
-                    </div>
-                    <div id="mainFormSuccess" class="form-success">
-                        <div class="success-icon">&#10003;</div>
-                        <h4>Mensagem enviada!</h4>
-                        <p>Obrigado pelo interesse. Nosso time entrará em contato em até 24h com uma proposta personalizada.</p>
-                    </div>
-                </div>
+                <h2 class="section-title">Um único ponto de entrada. Menos fricção.</h2>
+                <p class="section-subtitle">Para manter a experiência objetiva, o contato começa pelo diagnóstico do hero. Ele concentra as informações necessárias para a primeira análise.</p>
+                <a href="#topo" class="btn btn-primary">Ir para o formulário principal</a>
             </div>
         </div>
     </section>
@@ -4401,7 +4239,8 @@
             });
 
             // Diagnosis form
-            document.getElementById('diagForm').addEventListener('submit', function(e) {
+            var diagForm = document.getElementById('diagForm');
+            if (diagForm) { diagForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 var valid = true;
                 var form = this;
@@ -4433,10 +4272,11 @@
 
                 document.getElementById('diagFormContent').style.display = 'none';
                 document.getElementById('diagFormSuccess').classList.add('visible');
-            });
+            }); }
 
             // Main form
-            document.getElementById('mainForm').addEventListener('submit', function(e) {
+            var mainForm = document.getElementById('mainForm');
+            if (mainForm) { mainForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 var valid = true;
                 var form = this;
@@ -4479,7 +4319,7 @@
 
                 document.getElementById('mainFormContent').style.display = 'none';
                 document.getElementById('mainFormSuccess').classList.add('visible');
-            });
+            }); }
 
             // ============================================
             // FLOATING CTA VISIBILITY
@@ -4567,5 +4407,6 @@
     </script>
 </body>
 </html>
+
 
 
